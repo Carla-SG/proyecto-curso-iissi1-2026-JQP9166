@@ -1,11 +1,11 @@
 # Título Proyecto
 
-## Miembros del grupo LX-XXX-X (sustituir)
+## Miembros del grupo L2-ABS-5 (sustituir)
 
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
+1. Cantos González, Rubén
+1. Márquez Molina, Álvaro
+1. Sánchez Gago, Carla
+1. Venteo Tapia, Álvaro
 
 ## 1. Introducción al problema
 
