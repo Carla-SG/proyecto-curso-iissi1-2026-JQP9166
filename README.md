@@ -1,6 +1,6 @@
 # Título Proyecto
 
-## Miembros del grupo L2-ABS-5 (sustituir)
+## Miembros del grupo L2-ABS-5
 
 1. Cantos González, Rubén
 1. Márquez Molina, Álvaro
