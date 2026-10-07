@@ -2,7 +2,7 @@
 
 ## Miembros del grupo L2-ABS-5
 
-1. Cantos González, Rubénjhguhb
+1. Cantos González, Rubénjhgu
 1. Márquez Molina, Álvaroooooo
 1. Sánchez Gago, Carla
 1. Venteo Tapia, Álvaro
