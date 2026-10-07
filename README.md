@@ -195,9 +195,28 @@ para [razón]
 
 #### 4.1.2. Reglas de negocio
 
-##### R.N.01. Título regla negocio
+#### **RN-01: Fechas válidas**
+Solo será posible publicar viajes con la fecha de salida futura y la fecha de llegada posterior a la fecha de salida.
 
-Descripción de la regla de negocio.
+
+#### **RN-02: Política de cancelación**
+Si un pasajero cancela un viaje 24 horas antes o el conductor hace cambios en la hora o punto de salida y estas no le favorecen se le devolverá el 100% del importe automáticamente, si cancela con menos de 24 horas solo un 50% y si cancela una vez iniciado el viaje o no se presenta, perderá el importe total.  
+Si es el conductor el que cancela el viaje, su tasa de fiabilidad bajará y esto repercutirá en futuros viajes. 
+
+
+#### **RN-03: Validación de conductor**
+Un conductor no podrá publicar ningún viaje si no ha validado su permiso de conducir y su mayoría de edad. 
+
+
+#### **RN-04: Validación de pasajero**
+Ningún pasajero podrá reservar un viaje si no supera los 16 años y esta validado su DNI.
+
+#### **RN-05: Pagos**
+El dinero abonado por el pasajero se guardará en la aplicación desde la reserva hasta el fin de viaje para evitar fraudes.
+
+
+#### **RN-06: Valoraciones**
+Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado con él,y los pasajeros sólo pueden publicar valoraciones de los conductores con los que hayan viajado.
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
