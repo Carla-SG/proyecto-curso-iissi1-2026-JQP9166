@@ -25,17 +25,84 @@
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Título requisito funcional
-
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+#### **RF-01: Crear Viajes**
+**Como** conductor  
+**Quiero** crear viajes    
+**Para** que los pasajeros puedan apuntarse mi viaje.
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
 - Descripción de la segunda comprobación a realizar
 - Se debe aplicar la regla de negocio R.N.XX.
 - ...
+
+<br>
+
+#### **RF-02: Reservar viajes**
+**Como** pasajero  
+**Quiero** reservar todos los viajes que quiera    
+**Para** realizar varios viajes en distintas fechas.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+<br>
+
+#### **RF-03: Chatear**
+**Como** conductor y pasajero  
+**Quiero** acceder a un chat conductor-pasajero  
+**Para** poder hablar acerca de la hora de salida u otros aspectos del viaje, poder llegar a un acuerdo entre todas las partes y hacer variaciones en el viaje planteado.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+<br>
+
+#### **RF-04: Valorar**
+**Como** conductor y pasajero  
+**Quiero** poder valorar al conductor o pasajero una vez terminado el viaje, además de publicar un comentario explicando mi experiencia  
+**Para** que otros usuarios tengan información acerca del usuario.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+<br>
+
+#### **RF-05: Cancelar Conductor**
+**Como** conductor  
+**Quiero** poder cancelar el viaje que reservado  
+**Para** avisar a los pasajeros que no voy a realizar el viaje y puedan buscar otro.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+<br>
+
+#### **RF-06: Cancelar Pasajero**
+**Como** pasajero 
+**Quiero** poder cancelar el viaje que tengo reservado  
+**Para** avisar al conductor que no voy a realizar el viaje y dejar una plaza libre para otro pasajero.
+
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+<br>
 
 #### 4.1.1. Requisitos de información
 
