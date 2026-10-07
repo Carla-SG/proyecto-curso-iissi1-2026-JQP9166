@@ -91,7 +91,7 @@
 <br>
 
 #### **RF-06: Cancelar Pasajero**
-**Como** pasajero  
+**Como** pasajero 
 **Quiero** poder cancelar el viaje que tengo reservado  
 **Para** avisar al conductor que no voy a realizar el viaje y dejar una plaza libre para otro pasajero.
 
