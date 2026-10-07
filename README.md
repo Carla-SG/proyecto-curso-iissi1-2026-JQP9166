@@ -104,6 +104,82 @@
 
 <br>
 
+#### **RF-07: Pagar**
+**Como** pasajero  
+**Quiero** utilizar un método de pago  
+**Para** reservar el viaje de forma segura.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+<br>
+
+#### **RF-08: Cobrar**
+**Como** conductor  
+**Quiero** cobrar el pago realizado  
+**Para** rentar el viaje.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+<br>
+
+#### **RF-09: Editar viaje**
+**Como** conductor    
+**Quiero** tener la posibilidad de editar las características del viaje, como el precio, hora o lugar de salida,
+**Para** ajustar el viaje a las necesidades previo acuerdo con el pasajero.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+<br>
+
+#### **RF-010: Registro de usuario**  
+**Como** conductor y pasajero    
+**Quiero** identificarme      
+**Para** usar la aplicación y acceder a mis viajes.  
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+jij
+<br>
+
+#### **RF-11: Crear vehículos**  
+**Como** conductor,
+**Quiero** poder registrar o añadir vehículos con sus características,   
+**Para** facilitar la información del vehículo al realizar un viaje.  
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+<br>
+
+#### **RF-12: Búsqueda de Viaje**  
+**Como** pasajero,     
+**Quiero** un apartado de búsqueda de los puntos de origen y destino,        
+**Para** reservar mis viajes.  
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
 #### 4.1.1. Requisitos de información
 
 ##### R.I.01. Título requisito de información
