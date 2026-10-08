@@ -20,6 +20,11 @@
 ### 3.1. Requisitos generales
 
 ### 3.2. Usuarios del sistema
+|**Administrador**| Encargado de revisar y mantener el correcto funcionamiento de la plataforma. Gestiona usuarios (conductores y pasajeros), revisa y modera publicaciones de viajes, resuelve incidencias y garantiza el cumplimiento de las políticas y términos de uso. |
+|:--|:--|
+|**Conductor** | Usuario que publica los viajes que va a realizar, proporcionando información como la ruta, fecha, hora de salida, número de plazas. Es responsable de ofrecer una experiencia segura y confiable, al igual que mantener a los pasajeros informados de futuros imprevistos(retraso, anulación,...).|
+| **Pasajero**| Usuario que busca y reserva una plaza disponible en un viaje publicado. Una vez seleccionado y confirmado el viaje que mejor se adapte a sus necesidades, debe cumplir con las condiciones del conductor, como la puntualidad. |
+
 
 ## 4. Catálogo de requisitos
 
