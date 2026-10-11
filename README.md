@@ -16,8 +16,54 @@
 - Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.
 
 ## 3. Visión general del sistema
+El proyecto consiste en el desarrollo de un sistema para la gestión de transporte compartido, cuyo objetivo principal es conectar al conductor, que realiza cierto viaje con un determinado vehículo, con los pasajeros para la realización del viaje. 
+Un viaje está definido por los puntos físicos origen-destino, y cambia de estado en función del momento: Programado, EnCurso, Finalizado, Cancelado.
+Para la correcta realización del viaje, se deberá realizar una reserva del mismo, cuyo estado variará entre  Solicitada, Aceptada o Cancelada.
+Se continuará con la realización del cobro, mediante la pasarela de pago
+El sistema informará del estado del pago con los estados Pendiente, Exitoso o Reembolsado.
+La plataforma facilitará para la planificación del viaje el intercambio de mensajes privados entre conductor y pasajeros. Además, incluye un sistema de puntuación para conductores y pasajeros, que permitirá a los usuarios determinar una calificación una vez terminado el viaje.
+La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasajero y conductor. Además, esta interfaz debe ser sencilla para facilitar el uso a todo el público, fomentando el uso de vehículos compartidos.
+
 
 ### 3.1. Requisitos generales
+
+#### **RG-001: Facilidad de publicación y búsqueda**
+
+**Como** conductor o pasajero, 
+**Quiero** publicar y buscar viajes de la manera más sencilla posible, 
+**Para** acordar trayectos compartidos y no tener una planificación complicada. 
+
+<br>
+
+#### **RG-002: Transparencia del viaje**
+
+**Como** pasajero,   
+**Quiero** poder ver los detalles del viaje sin necesidad de reservar, 
+**Para** poder tomar una decisión con toda la información.  
+
+<br>
+
+#### **RG-003: Consulta de perfiles y valoración**
+
+**Como** conductor o pasajero, 
+**Quiero** poder ver los perfiles y valoraciones de los demás usuarios con los que voy a viajar, 
+**Para** aumentar la confianza y seguridad previa al viaje. 
+
+<br>
+
+#### **RG-004: Notificaciones y avisos**
+
+**Como** conductor o pasajero, 
+**Quiero** recibir recordatorios de mis viajes y avisos de cambios, 
+**Para** mantenerme informado en tiempo real sin tener que consultar la plataforma constantemente.
+
+<br>
+
+#### **RG-005: Atención al cliente**
+
+**Como** usuario,      
+**Quiero** tener disponible en todo momento algún medio de comunicación con los administradores, 
+**Para** reportar y solucionar problemas de manera rápida en cualquier momento. 
 
 ### 3.2. Usuarios del sistema
 
