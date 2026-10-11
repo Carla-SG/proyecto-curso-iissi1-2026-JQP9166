@@ -29,7 +29,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 #### **RG-001: Facilidad de publicación y búsqueda**
 
-**Como** conductor o pasajero, 
+**Como** conductor o pasajero,  
 **Quiero** publicar y buscar viajes de la manera más sencilla posible, 
 **Para** acordar trayectos compartidos y no tener una planificación complicada. 
 
