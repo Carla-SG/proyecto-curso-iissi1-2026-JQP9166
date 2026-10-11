@@ -233,50 +233,140 @@ jij
 
 #### 4.1.1. Requisitos de información
 
-##### R.I.01. Título requisito de información
+#### **RI-01: Historial de Viajes**
+**Como** conductor y pasajero  
+**Quiero** poder ver un registro de todas las rutas en las que he participado, con toda su respectiva información (rol, lugar y fecha de salida y llegada, precio, etc.)  
+**Para** poder llevar un control acerca de los viajes que he realizado.
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+###### 🧪*Pruebas de aceptación*  
+- Las rutas aparecen en el historial una vez se terminen o se cancelen.
+- La información mostrada (rol, lugar, fechas, precio, etc.) no puede modificarse.
 
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- ...
+<br>
+
+#### **RI-02: Próximos Viajes**
+**Como** conductor y pasajero  
+**Quiero** tener un listado con los futuros viajes que tengo reservados, con su respectiva información  
+**Para** recordar las fechas y poder organizarme
+
+###### 🧪*Pruebas de aceptación*  
+- Si un viaje se cancela, desaparece del listado y se notifica al usuario.
+- Se enviará un mensaje al usuario 24 horas antes del próximo viaje.
+- Se debe aplicar RN-01
+
+<br>
+
+#### **RI-03: Historial de Valoraciones**
+**Como** conductor y pasajero  
+**Quiero** conocer todas las valoraciones que otros usuarios (relación conductor-pasajero) han realizado acerca del viaje que realizaron conmigo  
+**Para** saber opiniones y sensaciones sobre mí y poder mejorar.
+
+###### 🧪*Pruebas de aceptación*  
+- No se podrá publicar valoraciones hasta la finalización del viaje.
+- El sistema guarda y gestiona correctamente todas las valoraciones recibidas.
+- Se debe aplicar RN-06.
+
+<br>
+
+#### **RI-04: Gestión de Notificaciones**
+**Como** conductor y pasajero  
+**Quiero** recibir notificaciones sobre los cambios y recordatorios del viaje  
+**Para** estar informado.
+
+###### 🧪*Pruebas de aceptación*  
+- El sistema debe generar una alerta automática para el pasajero si el estado del viaje cambia a 'Cancelado' o si se modifica la hora de salida.
+- Se debe aplicar RN-06.
+
+<br>
+
+#### **RI-05: Gestión de pagos**
+**Como** administrador  
+**Quiero** que el conductor reciba un precio recomendado para su viaje definido por esta formula:(distancia (km) * consumo medio(l/100Km)) + extras(peajes) + comisión de RideLink(15%)  
+**Para** que los viajes estén regidos por un precio justo.
+
+###### 🧪*Pruebas de aceptación*  
+- El sistema debe calcular automáticamente el precio recomendado.
+- Se debe aplicar RN-05.
+---
 
 #### 4.1.2. Reglas de negocio
 
 #### **RN-01: Fechas válidas**
 Solo será posible publicar viajes con la fecha de salida futura y la fecha de llegada posterior a la fecha de salida.
 
+<br>
 
 #### **RN-02: Política de cancelación**
 Si un pasajero cancela un viaje 24 horas antes o el conductor hace cambios en la hora o punto de salida y estas no le favorecen se le devolverá el 100% del importe automáticamente, si cancela con menos de 24 horas solo un 50% y si cancela una vez iniciado el viaje o no se presenta, perderá el importe total.  
-Si es el conductor el que cancela el viaje, su tasa de fiabilidad bajará y esto repercutirá en futuros viajes. 
+Si en cambio es el conductor el  que cancela el viaje, su tasa de fiabilidad bajará y esto repercutirá en futuros viajes ya que los pasajeros verán dicha tasa. 
+En ambos casos el pasajero/conductor afectado será notificado con un aviso automático.
 
+
+<br>
 
 #### **RN-03: Validación de conductor**
-Un conductor no podrá publicar ningún viaje si no ha validado su permiso de conducir y su mayoría de edad. 
+Un conductor no podrá publicar ningún viaje si aún no ha validado su permiso de conducir y por consiguiente su mayoría de edad. 
 
+<br>
 
 #### **RN-04: Validación de pasajero**
-Ningún pasajero podrá reservar un viaje si no supera los 16 años y esta validado su DNI.
+Ningún pasajero podrá reservar un viaje si no supera los 16 años y esto ha sido verificado con su DNI.
+
+<br>
 
 #### **RN-05: Pagos**
-El dinero abonado por el pasajero se guardará en la aplicación desde la reserva hasta el fin de viaje para evitar fraudes.
-
+El dinero abonado por el pasajero se guardará en la aplicación desde la reserva hasta el fin de viaje (evita fraudes).
+    
+<br>
 
 #### **RN-06: Valoraciones**
-Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado con él,y los pasajeros sólo pueden publicar valoraciones de los conductores con los que hayan viajado.
+Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado con él. A su vez, los pasajeros sólo pueden publicar valoraciones de los conductores con los que hayan viajado. 
+
+---
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
 ### 4.3. Requisitos no funcionales (opcional)
 
-**R.N.F. 01. Título requisito no funcional**
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+#### **RNF-01: Compatibilidad**
+**Como** responsable TIC  
+**Quiero** que la aplicación esté disponible en Android y en IOS  
+**Para** una mayor accesibilidad de nuestros clientes.
+
+<br>
+
+#### **RNF-02: Seguridad**  
+**Como** responsable de seguridad  
+**Quiero** que solo se muestren los datos necesarios (nombre, recorrido en la aplicación)  
+**Para** cumplir con la Ley de Protección de Datos  
+
+<br>
+
+#### **RNF-03: Usabilidad**  
+**Como** responsable de ventas  
+**Quiero** que la interfaz sea sencilla e intuitiva  
+**Para** que los usuarios tengan una experiencia agradable y cómoda  
+
+<br>
+
+#### **RNF-04: Tolerancia**  
+**Como** responsable de atención al cliente  
+**Quiero** que se pueda soportar un mínimo de 5000 usuarios sin degradar el servicio  
+**Para** mejorar la experiencia del cliente  
+
+<br>
+
+#### **RNF-05: Disponibilidad**  
+**Como** responsable del servicio  
+**Quiero** que el sistema tenga un tiempo de actividad del 99,5% anual  
+**Para** que el sistema esté disponible en todo momento a disposición del cliente 
+
+<br>
+
+#### **RNF-06: Robustez**  
+**Como** responsable del servicio  
+**Quiero** que exista la capacidad de restaurar el servicio ante una caída en menos de 5 minutos  
+**Para** mantener la disponibilidad del servicio las 24 horas del día
 
 -- fin entregable 1 --
 
