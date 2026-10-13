@@ -1,4 +1,4 @@
-# Título Proyecto
+# CharlaCar
 
 ## Miembros del grupo L2-ABS-5
 
@@ -82,10 +82,9 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 **Para** que los pasajeros puedan apuntarse mi viaje.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- El sistema debe impedir la creación del viaje si la llegada es anterior a la salida o la fecha de salida no es futura.
+- El sistema debe impedir la creación del viaje si las plazas publicadas superan la capacidad real del vehículo.
+- Se debe aplicar RN-01 y RN-03.   
 
 <br>
 
@@ -95,10 +94,10 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 **Para** realizar varios viajes en distintas fechas.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- El sistema debe impedir la reserva si el viaje no tiene plazas disponibles.
+- El sistema debe generar automáticamente un registro de pago en estado 'Pendiente' asociado a la reserva.
+- El pasajero puede ver la confirmación de su viaje y los detalles de la misma.
+- Se debe aplicar RN-04 y RN-05.
 
 <br>
 
@@ -108,10 +107,9 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 **Para** poder hablar acerca de la hora de salida u otros aspectos del viaje, poder llegar a un acuerdo entre todas las partes y hacer variaciones en el viaje planteado.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- El pasajero y el conductor pueden acceder al chat siempre que la reserva esté confirmada.
+- Los usuarios reciben notificaciones cuando llega un mensaje nuevo.
+- Se debe aplicar RN-04.
 
 <br>
 
@@ -121,10 +119,9 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 **Para** que otros usuarios tengan información acerca del usuario.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- El sistema permite al conductor o pasajero asignar una puntuación en estrellas y añadir un comentario.
+- El usuario no puede valorar un viaje que no haya completado.
+- Se debe aplicar RN-06.
 
 <br>
 
@@ -134,10 +131,9 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 **Para** avisar a los pasajeros que no voy a realizar el viaje y puedan buscar otro.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- El sistema notifica a todos los pasajeros cuando el conductor cancela un viaje.
+- El sistema no permite cancelar un viaje una vez iniciado.
+- Se debe aplicar RN-02.
 
 <br>
 
@@ -148,10 +144,10 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- El sistema libera una plaza cuando un pasajero cancela su reserva.
+- El conductor recibe una notificación cuando un pasajero cancela su reserva.
+- No se permite cancelar una reserva una vez iniciado el viaje.
+- Se debe aplicar RN-02.
 
 <br>
 
@@ -161,10 +157,9 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 **Para** reservar el viaje de forma segura.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- El sistema confirma el pago exitoso y genera un comprobante digital.
+- Si el pago falla, el sistema informa del error.
+- Se debe aplicar RN-05.
 
 <br>
 
@@ -174,10 +169,8 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 **Para** rentar el viaje.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- El sistema debe liberar el saldo en la cuenta del conductor únicamente cuando la fecha y hora de llegada del viaje haya pasado.
+- Se debe aplicar RN-05.
 
 <br>
 
@@ -187,10 +180,10 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 **Para** ajustar el viaje a las necesidades previo acuerdo con el pasajero.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- El sistema actualiza los cambios realizados y los refleja en la vista pública del viaje.
+- Los pasajeros reciben una notificación cuando el conductor modifica el viaje.
+- El sistema da error si se intenta modificar un viaje ya iniciado.
+- Se debe aplicar RN-01.
 
 <br>
 
@@ -200,11 +193,10 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 **Para** usar la aplicación y acceder a mis viajes.  
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
-jij
+- El sistema muestra un mensaje de error si el usuario introduce datos incorrectos al iniciar sesión.
+- El usuario debe registrarse introduciendo su nombre, correo electrónico, teléfono y contraseña válidos.
+- Se debe aplicar RN-04.
+
 <br>
 
 #### **RF-11: Crear vehículos**  
@@ -213,10 +205,9 @@ jij
 **Para** facilitar la información del vehículo al realizar un viaje.  
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- El sistema no permite registrar un vehículo si faltan datos obligatorios o el formato de matrícula es inválido.
+- El sistema muestra los viajes que coinciden con los criterios de búsqueda.
+- El sistema muestra un mensaje si no se encuentran viajes con los criterios introducidos.
 
 <br>
 
@@ -226,10 +217,8 @@ jij
 **Para** reservar mis viajes.  
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- El sistema muestra un mensaje si no se encuentran viajes con los criterios introducidos.
+- Se debe aplicar RN-01.
 
 #### 4.1.1. Requisitos de información
 
