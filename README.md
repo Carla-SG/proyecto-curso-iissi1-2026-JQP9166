@@ -243,9 +243,9 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 #### 4.1.1. Requisitos de información
 
 #### **RI-01: Usuarios del sistema**
-**Como** administrador,
-**Quiero** que exista una identificación de <u>usuario</u>, que permita al <u>administrador</u>, a los <u>pasajeros</u> y a los <u>conductores</u> acceder a su perfil del sistema, mediante un nombre, sus apellidos, email, teléfono y contraseña,
-**Para** permitirles usar correctamente el sistema.
+**Como** administrador,  
+**Quiero** que exista una identificación de <u>usuario</u>, que permita al <u>administrador</u>, a los <u>pasajeros</u> y a los <u>conductores</u> acceder a su perfil del sistema, mediante un nombre, sus apellidos, email, teléfono y contraseña,  
+**Para** permitirles usar correctamente el sistema.  
 
 ###### 🧪*Pruebas de aceptación*  
 - Un usuario no puede tener asignado más de un rol entre administrador, conductor y pasajero.
@@ -254,9 +254,9 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 <br>
 
 #### **RI-02: Historial de viajes**
-**Como** conductor y pasajero,
-**Quiero** un registro de todos los <u>viajes</u> que he realizado en el que pueda ver toda su información: fecha de salida, fecha de llegada, coste por plaza, plazas reservadas, plazas disponibles, estado y distancia. Además, me permitirá ver quién fue el <u>conductor</u>, con qué <u>coche</u> (y su información: matrícula, marca, modelo, plazas y consumo medio) y desde qué <u>punto físico</u> hasta qué otro,
-**Para** llevar un control acerca de mis viajes.
+**Como** conductor y pasajero,  
+**Quiero** un registro de todos los <u>viajes</u> que he realizado en el que pueda ver toda su información: fecha de salida, fecha de llegada, coste por plaza, plazas reservadas, plazas disponibles, estado y distancia. Además, me permitirá ver quién fue el <u>conductor</u>, con qué <u>coche</u> (y su información: matrícula, marca, modelo, plazas y consumo medio) y desde qué <u>punto físico</u> hasta qué otro,  
+**Para** llevar un control acerca de mis viajes.  
 
 ###### 🧪*Pruebas de aceptación*  
 - Los viajes aparecen en el historial una vez se terminen (o se cancelen).
@@ -266,8 +266,8 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 #### **RI-03: Viajes reservados**
 **Como** conductor y pasajero  
-**Quiero** ver cada <u>reserva</u> de viaje que he realizado, con la información acerca del estado y fecha de la misma.
-**Para** poder organizarme y no olvidar el viaje programado.
+**Quiero** ver cada <u>reserva</u> de viaje que he realizado, con la información acerca del estado y fecha de la misma.  
+**Para** poder organizarme y no olvidar el viaje programado.  
 
 ###### 🧪*Pruebas de aceptación*  
 - Si un viaje se cancela, desaparece del listado y se notifica al usuario.
@@ -277,9 +277,9 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 <br>
 
 #### **RI-04: Valoraciones**
-**Como** conductor y pasajero  
-**Quiero** conocer las <u>valoraciones</u> que otros usuarios han realizado del viaje que realizamos juntos, incluyendo las estrellas, la fecha y el contenido opcional,
-**Para** saber opiniones tuvieron sobre mí y poder mejorar de cara a próximos viajes.
+**Como** conductor y pasajero   
+**Quiero** conocer las <u>valoraciones</u> que otros usuarios han realizado del viaje que realizamos juntos, incluyendo las estrellas, la fecha y el contenido opcional,  
+**Para** saber opiniones tuvieron sobre mí y poder mejorar de cara a próximos viajes.  
 
 ###### 🧪*Pruebas de aceptación*  
 - No se podrá publicar valoraciones hasta la finalización del viaje.
@@ -289,9 +289,9 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 <br>
 
 #### **RI-05: Gestión de pagos**
-**Como** conductor
+**Como** conductor  
 **Quiero** tener  información acerca del estado del <u>pago</u>, que contenga el estado, la fecha y el importe, que vendrá recomendado por esta formula:(distancia (km) * consumo medio(l/100Km)) + extras(peajes) + comisión de CharlaCar(15%)  
-**Para** tener un pago seguro y que los viajes estén regidos por un precio justo.
+**Para** tener un pago seguro y que los viajes estén regidos por un precio justo.  
 
 ###### 🧪*Pruebas de aceptación*  
 - El sistema debe calcular automáticamente el precio recomendado.
