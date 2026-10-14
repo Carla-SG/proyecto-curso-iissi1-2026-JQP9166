@@ -21,23 +21,23 @@ A través de CharlaCar, Carlos puede publicar sus plazas libres calculando un pr
 
 ## 2. Glosario de términos
 
-•	Administrador 🛡️: Perfil encargado de revisar y mantener el correcto funcionamiento de la plataforma, gestionar incidencias, moderar viajes y asegurar que se cumplan las normativas de la aplicación.
+•	**Administrador** 🛡️: Perfil encargado de revisar y mantener el correcto funcionamiento de la plataforma, gestionar incidencias, moderar viajes y asegurar que se cumplan las normativas de la aplicación.
 
-•	Chat 💬: Herramienta de comunicación interna de la plataforma que permite a conductores y pasajeros intercambiar mensajes una vez confirmada una reserva, facilitando la coordinación de detalles como el punto exacto de encuentro. 
+•	**Chat** 💬: Herramienta de comunicación interna de la plataforma que permite a conductores y pasajeros intercambiar mensajes una vez confirmada una reserva, facilitando la coordinación de detalles como el punto exacto de encuentro. 
 
-•	Conductor 🚗: Usuario mayor de edad y con permiso de conducir validado, que publica un trayecto ofreciendo las plazas libres de su vehículo, estableciendo fecha, ruta, hora de salida y precio. 
+•	**Conductor** 🚗: Usuario mayor de edad y con permiso de conducir validado, que publica un trayecto ofreciendo las plazas libres de su vehículo, estableciendo fecha, ruta, hora de salida y precio. 
 
-•	Pasajero 🎒: Usuario (mayor de 16 años verificado mediante DNI) que utiliza el sistema para buscar trayectos publicados y reservar una plaza en el vehículo de un conductor. 
+•	**Pasajero** 🎒: Usuario (mayor de 16 años verificado mediante DNI) que utiliza el sistema para buscar trayectos publicados y reservar una plaza en el vehículo de un conductor. 
 
-•	Pasarela de pago 💳: Sistema de cobro de la aplicación que gestiona las transacciones de forma segura. Retiene el dinero abonado por el pasajero desde la reserva hasta que finaliza el viaje, momento en el cual libera los fondos al conductor, evitando así posibles fraudes. 
+•	**Pasarela de pago** 💳: Sistema de cobro de la aplicación que gestiona las transacciones de forma segura. Retiene el dinero abonado por el pasajero desde la reserva hasta que finaliza el viaje, momento en el cual libera los fondos al conductor, evitando así posibles fraudes. 
 
-•	Precio recomendado 💶: Tarifa sugerida automáticamente por el sistema para asegurar precios justos. Se calcula en base a la distancia, consumo medio del vehículo, extras (como peajes) y la comisión de la plataforma. 
+•	**Precio recomendado** 💶: Tarifa sugerida automáticamente por el sistema para asegurar precios justos. Se calcula en base a la distancia, consumo medio del vehículo, extras (como peajes) y la comisión de la plataforma. 
 
-•	Reserva 📅: Acción formal por la cual un pasajero solicita y asegura una plaza en un viaje publicado. Pasa por los estados: Solicitada, Aceptada o Cancelada. 
+•	**Reserva** 📅: Acción formal por la cual un pasajero solicita y asegura una plaza en un viaje publicado. Pasa por los estados: Solicitada, Aceptada o Cancelada. 
 
-•	Valoración ⭐: Puntuación (mediante un sistema de estrellas) y comentario textual que un usuario otorga a otro tras finalizar un viaje compartido, con el fin de informar a la comunidad y mantener la seguridad y confianza. 
+•	**Valoración** ⭐: Puntuación (mediante un sistema de estrellas) y comentario textual que un usuario otorga a otro tras finalizar un viaje compartido, con el fin de informar a la comunidad y mantener la seguridad y confianza. 
 
-•	Viaje 📍: Trayecto creado por un conductor definido por un punto de origen y un destino físico específicos. Su ciclo de vida pasa por los estados: Programado, EnCurso, Finalizado o Cancelado. 
+•	**Viaje** 📍: Trayecto creado por un conductor definido por un punto de origen y un destino físico específicos. Su ciclo de vida pasa por los estados: Programado, EnCurso, Finalizado o Cancelado. 
 
 
 ## 3. Visión general del sistema
