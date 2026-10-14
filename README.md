@@ -265,9 +265,9 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RI-03: Historial de Valoraciones**
+#### **RI-03: Valoraciones**
 **Como** conductor y pasajero  
-**Quiero** conocer todas las valoraciones que otros usuarios (relación conductor-pasajero) han realizado acerca del viaje que realizaron conmigo  
+**Quiero** conocer todas las valoraciones que otros usuarios (relación conductor-pasajero) han realizado acerca del viaje que realizaron conmigo, con la información de la fecha realizada, el contenido y las estrellas.  
 **Para** saber opiniones y sensaciones sobre mí y poder mejorar.
 
 ###### 🧪*Pruebas de aceptación*  
