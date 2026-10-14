@@ -201,7 +201,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 #### **RF-09: Editar viaje**
 **Como** conductor    
-**Quiero** tener la posibilidad de editar las características del viaje, tales como el precio, hora o lugar de salida,
+**Quiero** tener la posibilidad de editar las características del viaje, tales como el precio, hora o lugar de salida,  
 **Para** ajustar el viaje a las necesidades acordadas
 
 **Prueba de aceptación**
@@ -225,7 +225,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 <br>
 
 #### **RF-11: Crear vehículos**  
-**Como** conductor,
+**Como** conductor,  
 **Quiero** poder registrar o añadir vehículos con sus características,   
 **Para** facilitar la información del vehículo al realizar un viaje.  
 
