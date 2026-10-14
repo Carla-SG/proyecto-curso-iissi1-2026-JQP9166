@@ -3,13 +3,13 @@
 ## Miembros del grupo L2-ABS-5
 
 1. Cantos González, Rubén
-1. Márquez Molina, Álvaromm
+1. Márquez Molina, Álvaro
 1. Sánchez Gago, Carla
-1. Venteo Tapia, Álvaron
+1. Venteo Tapia, Álvaro
 
 ## 1. Introducción al problema
 
-- El modelo actual de transporte interurbano y urbano a menudo se enfrenta a problemas como el alto coste económico de los desplazamientos individuales, la congestión del tráfico y un impacto ambiental negativo debido a la alta emisión de gases contaminantes. A su vez, muchos conductores realizan trayectos diarios o esporádicos con asientos vacíos en sus vehículos, mientras que existen personas buscando alternativas de transporte eficientes, económicas y directas para esas mismas rutas.
+El modelo actual de transporte interurbano y urbano a menudo se enfrenta a problemas como el alto coste económico de los desplazamientos individuales, la congestión del tráfico y un impacto ambiental negativo debido a la alta emisión de gases contaminantes. A su vez, muchos conductores realizan trayectos diarios o esporádicos con asientos vacíos en sus vehículos, mientras que existen personas buscando alternativas de transporte eficientes, económicas y directas para esas mismas rutas.
 
 CharlaCar nace como una solución tecnológica orientada a la economía colaborativa para resolver este problema. El proyecto propone el desarrollo de un sistema integral de transporte compartido que conecta de forma rápida y segura a conductores con plazas disponibles y pasajeros que necesitan realizar el mismo viaje. A través de una plataforma accesible e intuitiva, los usuarios podrán gestionar la publicación, búsqueda y reserva de trayectos de manera transparente. Además, el sistema centraliza la comunicación y los pagos, ofreciendo un entorno confiable que se sustenta en la verificación de usuarios y un sistema de valoraciones cruzadas, fomentando así un uso más sostenible, económico y social de los vehículos.  
 
