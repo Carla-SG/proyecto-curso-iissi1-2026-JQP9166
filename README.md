@@ -9,11 +9,31 @@
 
 ## 1. Introducción al problema
 
-- 
+- El modelo actual de transporte interurbano y urbano a menudo se enfrenta a problemas como el alto coste económico de los desplazamientos individuales, la congestión del tráfico y un impacto ambiental negativo debido a la alta emisión de gases contaminantes. A su vez, muchos conductores realizan trayectos diarios o esporádicos con asientos vacíos en sus vehículos, mientras que existen personas buscando alternativas de transporte eficientes, económicas y directas para esas mismas rutas.
+
+CharlaCar nace como una solución tecnológica orientada a la economía colaborativa para resolver este problema. El proyecto propone el desarrollo de un sistema integral de transporte compartido que conecta de forma rápida y segura a conductores con plazas disponibles y pasajeros que necesitan realizar el mismo viaje. A través de una plataforma accesible e intuitiva, los usuarios podrán gestionar la publicación, búsqueda y reserva de trayectos de manera transparente. Además, el sistema centraliza la comunicación y los pagos, ofreciendo un entorno confiable que se sustenta en la verificación de usuarios y un sistema de valoraciones cruzadas, fomentando así un uso más sostenible, económico y social de los vehículos.  
+
 
 ## 2. Glosario de términos
 
-- Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.
+•	Administrador 🛡️: Perfil encargado de revisar y mantener el correcto funcionamiento de la plataforma, gestionar incidencias, moderar viajes y asegurar que se cumplan las normativas de la aplicación.
+
+•	Chat 💬: Herramienta de comunicación interna de la plataforma que permite a conductores y pasajeros intercambiar mensajes una vez confirmada una reserva, facilitando la coordinación de detalles como el punto exacto de encuentro. 
+
+•	Conductor 🚗: Usuario mayor de edad y con permiso de conducir validado, que publica un trayecto ofreciendo las plazas libres de su vehículo, estableciendo fecha, ruta, hora de salida y precio. 
+
+•	Pasajero 🎒: Usuario (mayor de 16 años verificado mediante DNI) que utiliza el sistema para buscar trayectos publicados y reservar una plaza en el vehículo de un conductor. 
+
+•	Pasarela de pago 💳: Sistema de cobro de la aplicación que gestiona las transacciones de forma segura. Retiene el dinero abonado por el pasajero desde la reserva hasta que finaliza el viaje, momento en el cual libera los fondos al conductor, evitando así posibles fraudes. 
+
+•	Precio recomendado 💶: Tarifa sugerida automáticamente por el sistema para asegurar precios justos. Se calcula en base a la distancia, consumo medio del vehículo, extras (como peajes) y la comisión de la plataforma. 
+
+•	Reserva 📅: Acción formal por la cual un pasajero solicita y asegura una plaza en un viaje publicado. Pasa por los estados: Solicitada, Aceptada o Cancelada. 
+
+•	Valoración ⭐: Puntuación (mediante un sistema de estrellas) y comentario textual que un usuario otorga a otro tras finalizar un viaje compartido, con el fin de informar a la comunidad y mantener la seguridad y confianza. 
+
+•	Viaje 📍: Trayecto creado por un conductor definido por un punto de origen y un destino físico específicos. Su ciclo de vida pasa por los estados: Programado, EnCurso, Finalizado o Cancelado. 
+
 
 ## 3. Visión general del sistema
 El proyecto consiste en el desarrollo de un sistema para la gestión de transporte compartido, cuyo objetivo principal es conectar al conductor, que realiza cierto viaje con un determinado vehículo, con los pasajeros para la realización del viaje. 
