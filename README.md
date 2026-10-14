@@ -55,40 +55,40 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 #### **RG-001: Facilidad de publicación y búsqueda**
 
 **Como** conductor o pasajero,  
-**Quiero** publicar y buscar viajes de la manera más sencilla posible, 
-**Para** acordar trayectos compartidos y no tener una planificación complicada. 
+**Quiero** publicar y buscar viajes de la manera más sencilla posible,  
+**Para** acordar trayectos compartidos y no tener una planificación complicada.  
 
 <br>
 
 #### **RG-002: Transparencia del viaje**
 
-**Como** pasajero,   
-**Quiero** poder ver los detalles del viaje sin necesidad de reservar, 
-**Para** poder tomar una decisión con toda la información.  
+**Como** pasajero,  
+**Quiero** poder ver los detalles del viaje sin necesidad de reservar,  
+**Para** poder tomar una decisión con toda la información.   
 
 <br>
 
 #### **RG-003: Consulta de perfiles y valoración**
 
-**Como** conductor o pasajero, 
-**Quiero** poder ver los perfiles y valoraciones de los demás usuarios con los que voy a viajar, 
-**Para** aumentar la confianza y seguridad previa al viaje. 
+**Como** conductor o pasajero,  
+**Quiero** poder ver los perfiles y valoraciones de los demás usuarios con los que voy a viajar,  
+**Para** aumentar la confianza y seguridad previa al viaje.  
 
 <br>
 
 #### **RG-004: Notificaciones y avisos**
 
-**Como** conductor o pasajero, 
-**Quiero** recibir recordatorios de mis viajes y avisos de cambios, 
-**Para** mantenerme informado en tiempo real sin tener que consultar la plataforma constantemente.
+**Como** conductor o pasajero,  
+**Quiero** recibir recordatorios de mis viajes y avisos de cambios,  
+**Para** mantenerme informado en tiempo real sin tener que consultar la plataforma constantemente. 
 
 <br>
 
 #### **RG-005: Atención al cliente**
 
 **Como** usuario,      
-**Quiero** tener disponible en todo momento algún medio de comunicación con los administradores, 
-**Para** reportar y solucionar problemas de manera rápida en cualquier momento. 
+**Quiero** tener disponible en todo momento algún medio de comunicación con los administradores,  
+**Para** reportar y solucionar problemas de manera rápida en cualquier momento.  
 
 ### 3.2. Usuarios del sistema
 |**Administrador**| Encargado de revisar y mantener el correcto funcionamiento de la plataforma. Gestiona usuarios (conductores y pasajeros), revisa y modera publicaciones de viajes, resuelve incidencias y garantiza el cumplimiento de las políticas y términos de uso. |
@@ -101,14 +101,14 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 ### 4.1. Requisitos funcionales
 
-#### **RF-01: Crear Viajes**
+#### **RF-01: Crear viajes**
 **Como** conductor  
 **Quiero** crear viajes    
 **Para** que los pasajeros puedan apuntarse mi viaje.
 
 **Prueba de aceptación**
-- El sistema debe impedir la creación del viaje si la llegada es anterior a la salida o la fecha de salida no es futura.
-- El sistema debe impedir la creación del viaje si las plazas publicadas superan la capacidad real del vehículo.
+- El sistema debe impedir la creación del viaje si el vehículo no es válido, o la llegada es anterior a la salida o alguna de ellas no es válida.
+- El sistema debe impedir que se sobrepase la capacidad del vehículo.
 - Se debe aplicar RN-01 y RN-03.   
 
 <br>
@@ -116,23 +116,23 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 #### **RF-02: Reservar viajes**
 **Como** pasajero  
 **Quiero** reservar todos los viajes que quiera    
-**Para** realizar varios viajes en distintas fechas.
+**Para** realizar viajes en distintas fechas.
 
 **Prueba de aceptación**
-- El sistema debe impedir la reserva si el viaje no tiene plazas disponibles.
-- El sistema debe generar automáticamente un registro de pago en estado 'Pendiente' asociado a la reserva.
-- El pasajero puede ver la confirmación de su viaje y los detalles de la misma.
-- Se debe aplicar RN-04 y RN-05.
+- El sistema no debe permitir la reserva si el viaje no tiene plazas disponibles.
+- El sistema debe generar automáticamente un registro de pago asociado a la reserva en estado 'Pendiente'.
+- Los pasajeros y conductor pueden ver la confirmación de su viaje y los detalles de la misma.
+- Se deben aplicar RN-04 y RN-05.
 
 <br>
 
 #### **RF-03: Chatear**
 **Como** conductor y pasajero  
-**Quiero** acceder a un chat conductor-pasajero  
-**Para** poder hablar acerca de la hora de salida u otros aspectos del viaje, poder llegar a un acuerdo entre todas las partes y hacer variaciones en el viaje planteado.
+**Quiero** intercambiar mensajes entre conductor y pasajero  
+**Para** poder llegar a un acuerdo sobre aspectos del viaje y hacer variaciones en el viaje planteado.
 
 **Prueba de aceptación**
-- El pasajero y el conductor pueden acceder al chat siempre que la reserva esté confirmada.
+- Mientras la reserva esté reservada, el pasajero y el conductor pueden acceder al chat.
 - Los usuarios reciben notificaciones cuando llega un mensaje nuevo.
 - Se debe aplicar RN-04.
 
@@ -140,32 +140,32 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 #### **RF-04: Valorar**
 **Como** conductor y pasajero  
-**Quiero** poder valorar al conductor o pasajero una vez terminado el viaje, además de publicar un comentario explicando mi experiencia  
+**Quiero** que una vez terminado el viaje, pueda valorar al conductor o pasajero y tener la opción de dejar un comentario sobre la experiencia.  
 **Para** que otros usuarios tengan información acerca del usuario.
 
 **Prueba de aceptación**
-- El sistema permite al conductor o pasajero asignar una puntuación en estrellas y añadir un comentario.
-- El usuario no puede valorar un viaje que no haya completado.
+- El sistema permite al usuario asignar una puntuación en estrellas y añadir un comentario.
+- Si el viaje no ha sido completado, no se permiten valoraciones.
 - Se debe aplicar RN-06.
 
 <br>
 
-#### **RF-05: Cancelar Conductor**
+#### **RF-05: Cancelar viaje**
 **Como** conductor  
-**Quiero** poder cancelar el viaje que reservado  
-**Para** avisar a los pasajeros que no voy a realizar el viaje y puedan buscar otro.
+**Quiero** poder cancelar el viaje reservado por pasajeros  
+**Para** avisar a los pasajeros que no voy a realizar el viaje y puedan buscar otro viaje.
 
 **Prueba de aceptación**
 - El sistema notifica a todos los pasajeros cuando el conductor cancela un viaje.
-- El sistema no permite cancelar un viaje una vez iniciado.
+- Una vez iniciado, el sistema no permite cancelar un viaje.
 - Se debe aplicar RN-02.
 
 <br>
 
-#### **RF-06: Cancelar Pasajero**
-**Como** pasajero 
+#### **RF-06: Cancelar pasajero**
+**Como** pasajero  
 **Quiero** poder cancelar el viaje que tengo reservado  
-**Para** avisar al conductor que no voy a realizar el viaje y dejar una plaza libre para otro pasajero.
+**Para** avisar al conductor que no voy a realizar el viaje y dejar una plaza libre para otro pasajero.  
 
 
 **Prueba de aceptación**
@@ -191,18 +191,18 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 #### **RF-08: Cobrar**
 **Como** conductor  
 **Quiero** cobrar el pago realizado  
-**Para** rentar el viaje.
+**Para** obtener beneficio del viaje.
 
 **Prueba de aceptación**
-- El sistema debe liberar el saldo en la cuenta del conductor únicamente cuando la fecha y hora de llegada del viaje haya pasado.
+- El sistema liberará el saldo en la cuenta del conductor únicamente cuando el viaje se de por finalizado.
 - Se debe aplicar RN-05.
 
 <br>
 
 #### **RF-09: Editar viaje**
 **Como** conductor    
-**Quiero** tener la posibilidad de editar las características del viaje, como el precio, hora o lugar de salida,
-**Para** ajustar el viaje a las necesidades previo acuerdo con el pasajero.
+**Quiero** tener la posibilidad de editar las características del viaje, tales como el precio, hora o lugar de salida,
+**Para** ajustar el viaje a las necesidades acordadas
 
 **Prueba de aceptación**
 - El sistema actualiza los cambios realizados y los refleja en la vista pública del viaje.
@@ -212,7 +212,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-010: Registro de usuario**  
+#### **RF-10: Registro de usuario**  
 **Como** conductor y pasajero    
 **Quiero** identificarme      
 **Para** usar la aplicación y acceder a mis viajes.  
@@ -232,11 +232,11 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 **Prueba de aceptación**
 - El sistema no permite registrar un vehículo si faltan datos obligatorios o el formato de matrícula es inválido.
 - El sistema muestra los viajes que coinciden con los criterios de búsqueda.
-- El sistema muestra un mensaje si no se encuentran viajes con los criterios introducidos.
+
 
 <br>
 
-#### **RF-12: Búsqueda de Viaje**  
+#### **RF-12: Búsqueda de viaje**  
 **Como** pasajero,     
 **Quiero** un apartado de búsqueda de los puntos de origen y destino,        
 **Para** reservar mis viajes.  
@@ -247,21 +247,32 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 #### 4.1.1. Requisitos de información
 
-#### **RI-01: Historial de Viajes**
-**Como** conductor y pasajero  
-**Quiero** poder ver un registro de todas las rutas en las que he participado, con toda su respectiva información (rol, lugar y fecha de salida y llegada, precio, etc.)  
-**Para** poder llevar un control acerca de los viajes que he realizado.
+#### **RI-01: Usuarios del sistema**
+**Como** administrador,
+**Quiero** que exista una identificación de <u>usuario</u>, que permita al <u>administrador</u>, a los <u>pasajeros</u> y a los <u>conductores</u> acceder a su perfil del sistema, mediante un nombre, sus apellidos, email, teléfono y contraseña,
+**Para** permitirles usar correctamente el sistema.
 
 ###### 🧪*Pruebas de aceptación*  
-- Las rutas aparecen en el historial una vez se terminen o se cancelen.
-- La información mostrada (rol, lugar, fechas, precio, etc.) no puede modificarse.
+- Un usuario no puede tener asignado más de un rol entre administrador, conductor y pasajero.
+- La información podrá modificarse.
 
 <br>
 
-#### **RI-02: Próximos Viajes**
+#### **RI-02: Historial de viajes**
+**Como** conductor y pasajero,
+**Quiero** un registro de todos los <u>viajes</u> que he realizado en el que pueda ver toda su información: fecha de salida, fecha de llegada, coste por plaza, plazas reservadas, plazas disponibles, estado y distancia. Además, me permitirá ver quién fue el <u>conductor</u>, con qué <u>coche</u> (y su información: matrícula, marca, modelo, plazas y consumo medio) y desde qué <u>punto físico</u> hasta qué otro,
+**Para** llevar un control acerca de mis viajes.
+
+###### 🧪*Pruebas de aceptación*  
+- Los viajes aparecen en el historial una vez se terminen (o se cancelen).
+- La información del viaje no puede modificarse.
+
+<br>
+
+#### **RI-03: Viajes reservados**
 **Como** conductor y pasajero  
-**Quiero** tener un listado con los futuros viajes que tengo reservados, con su respectiva información  
-**Para** recordar las fechas y poder organizarme
+**Quiero** ver cada <u>reserva</u> de viaje que he realizado, con la información acerca del estado y fecha de la misma.
+**Para** poder organizarme y no olvidar el viaje programado.
 
 ###### 🧪*Pruebas de aceptación*  
 - Si un viaje se cancela, desaparece del listado y se notifica al usuario.
@@ -270,10 +281,10 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RI-03: Historial de Valoraciones**
+#### **RI-04: Valoraciones**
 **Como** conductor y pasajero  
-**Quiero** conocer todas las valoraciones que otros usuarios (relación conductor-pasajero) han realizado acerca del viaje que realizaron conmigo  
-**Para** saber opiniones y sensaciones sobre mí y poder mejorar.
+**Quiero** conocer las <u>valoraciones</u> que otros usuarios han realizado del viaje que realizamos juntos, incluyendo las estrellas, la fecha y el contenido opcional,
+**Para** saber opiniones tuvieron sobre mí y poder mejorar de cara a próximos viajes.
 
 ###### 🧪*Pruebas de aceptación*  
 - No se podrá publicar valoraciones hasta la finalización del viaje.
@@ -282,21 +293,10 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RI-04: Gestión de Notificaciones**
-**Como** conductor y pasajero  
-**Quiero** recibir notificaciones sobre los cambios y recordatorios del viaje  
-**Para** estar informado.
-
-###### 🧪*Pruebas de aceptación*  
-- El sistema debe generar una alerta automática para el pasajero si el estado del viaje cambia a 'Cancelado' o si se modifica la hora de salida.
-- Se debe aplicar RN-06.
-
-<br>
-
 #### **RI-05: Gestión de pagos**
-**Como** administrador  
-**Quiero** que el conductor reciba un precio recomendado para su viaje definido por esta formula:(distancia (km) * consumo medio(l/100Km)) + extras(peajes) + comisión de RideLink(15%)  
-**Para** que los viajes estén regidos por un precio justo.
+**Como** conductor
+**Quiero** tener  información acerca del estado del <u>pago</u>, que contenga el estado, la fecha y el importe, que vendrá recomendado por esta formula:(distancia (km) * consumo medio(l/100Km)) + extras(peajes) + comisión de CharlaCar(15%)  
+**Para** tener un pago seguro y que los viajes estén regidos por un precio justo.
 
 ###### 🧪*Pruebas de aceptación*  
 - El sistema debe calcular automáticamente el precio recomendado.
