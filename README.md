@@ -245,7 +245,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 - El sistema muestra un mensaje si no se encuentran viajes con los criterios introducidos.
 - Se debe aplicar RN-01.
 
-#### 4.1.1. Requisitos de información
+### 4.1.1. Requisitos de información
 
 #### **RI-01: Usuarios del sistema**
 **Como** administrador,  
@@ -303,7 +303,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 - Se debe aplicar RN-05.
 ---
 
-#### 4.1.2. Reglas de negocio
+### 4.1.2. Reglas de negocio
 
 #### **RN-01: Fechas válidas**
 Solo será posible publicar viajes con la fecha de salida futura y la fecha de llegada posterior a la fecha de salida.
