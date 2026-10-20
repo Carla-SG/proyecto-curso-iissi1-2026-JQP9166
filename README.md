@@ -103,12 +103,12 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 #### **RF-01: Consultas de viajes**
 **Como** conductor y pasajero,  
-**Quiero** ver los viajes disponibles actualmente,   
+**Quiero** ver los viajes disponibles actualmente que vayan desde un punto físico a otro,   
 **Para** comprobar si algún viaje se ajusta a mis necesidades.
 
 **Prueba de aceptación**
 - No aparecerán los viajes finalizados ni cancelados.
-- Aparecerán ordenados por distancia desde mi ubicación.
+- Aparecerán ordenados por fecha de salida.
 
 <br>
 
