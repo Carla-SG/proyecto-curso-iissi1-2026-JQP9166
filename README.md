@@ -258,30 +258,40 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RI-02: Historial de viajes**
+#### **RI-02: Viajes**
 **Como** conductor y pasajero,  
-**Quiero** un registro de todos los <u>viajes</u> que he realizado en el que pueda ver toda su información: fecha de salida, fecha de llegada, coste por plaza, plazas reservadas, plazas disponibles, estado y distancia. Además, me permitirá ver quién fue el <u>conductor</u>, con qué <u>coche</u> (y su información: matrícula, marca, modelo, plazas y consumo medio) y desde qué <u>punto físico</u> hasta qué otro,  
+**Quiero** un registro de los <u>viajes</u> en los que he perticipado, voy a participar o se han cancelado en el que pueda ver toda su información: fecha de salida, fecha de llegada, coste por plaza, plazas reservadas, plazas disponibles, estado y distancia. Además, me permitirá ver al <u>conductor</u> (el cuál tendrá verificado su carnet de conduccir, además de haber subido una foto de su carnet y tendrá una valoración media), con qué <u>vehículo</u> (y su información: matrícula, marca, modelo, plazas y consumo medio) y desde qué <u>punto físico</u> hasta qué otro,  
 **Para** llevar un control acerca de mis viajes.  
 
 ###### 🧪*Pruebas de aceptación*  
-- Los viajes aparecen en el historial una vez se terminen (o se cancelen).
-- La información del viaje no puede modificarse.
+- Puedo ver todos los viajes que realicé.
+- La información de los viajes no puede modificarse.
 
 <br>
 
-#### **RI-03: Viajes reservados**
+#### **RI-03: Punto Físico**
+**Como** conductor y pasajero,  
+**Quiero** ver los <u>puntos físicos</u> desde donde parte y a donde llega un viaje en el que participo, donde podré ver la dirección, localidad, provincia, país u código postal,   
+**Para** poder determinar si me conviene o no realizar el viaje.  
+
+###### 🧪*Pruebas de aceptación*  
+- No existirán dos direcciones iguales.
+- No puedepartir y llegar al mismo punto físico.
+
+<br>
+
+#### **RI-04: Reservas de viajes**
 **Como** conductor y pasajero  
 **Quiero** ver cada <u>reserva</u> de viaje que he realizado, con la información acerca del estado y fecha de la misma.  
 **Para** poder organizarme y no olvidar el viaje programado.  
 
 ###### 🧪*Pruebas de aceptación*  
-- Si un viaje se cancela, desaparece del listado y se notifica al usuario.
-- Se enviará un mensaje al usuario 24 horas antes del próximo viaje.
+- Si un viaje se cancela, desaparece del listado.
 - Se debe aplicar RN-01
 
 <br>
 
-#### **RI-04: Valoraciones**
+#### **RI-05: Valoraciones**
 **Como** conductor y pasajero   
 **Quiero** conocer las <u>valoraciones</u> que otros usuarios han realizado del viaje que realizamos juntos, incluyendo las estrellas, la fecha y el contenido opcional,  
 **Para** saber opiniones tuvieron sobre mí y poder mejorar de cara a próximos viajes.  
@@ -293,9 +303,20 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RI-05: Gestión de pagos**
-**Como** conductor  
-**Quiero** tener  información acerca del estado del <u>pago</u>, que contenga el estado, la fecha y el importe, que vendrá recomendado por esta formula:(distancia (km) * consumo medio(l/100Km)) + extras(peajes) + comisión de CharlaCar(15%)  
+#### **RI-06: Mensajes**
+**Como** conductor y pasajero   
+**Quiero** intercambiar <u>mensajes</u> con los otros usuarios con los que voy a realizar un viaje,  
+**Para** concretar aspectos del viaje. 
+
+###### 🧪*Pruebas de aceptación*  
+- No se podrá enviar mensajes si el viaje ha finalizado.
+- Los mensajes no podrán ser eliminados.
+
+<br>
+
+#### **RI-07: Gestión de pagos**
+**Como** conductor y pasajero,  
+**Quiero** tener  información acerca del estado del <u>pago</u>, que contenga el estado, la fecha y el importe, que vendrá recomendado para el creador del viaje por esta formula:(distancia (km) * consumo medio(l/100Km)) + extras(peajes) + comisión de CharlaCar(15%).  
 **Para** tener un pago seguro y que los viajes estén regidos por un precio justo.  
 
 ###### 🧪*Pruebas de aceptación*  
