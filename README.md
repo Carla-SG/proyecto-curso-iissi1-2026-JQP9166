@@ -101,142 +101,111 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 ### 4.1. Requisitos funcionales
 
-#### **RF-01: Crear viajes**
-**Como** conductor  
-**Quiero** crear viajes    
-**Para** que los pasajeros puedan apuntarse mi viaje.
+#### **RF-01: Consultas de viajes**
+**Como** conductor y pasajero,  
+**Quiero** ver los viajes disponibles actualmente,   
+**Para** comprobar si algún viaje se ajusta a mis necesidades.
 
 **Prueba de aceptación**
-- El sistema debe impedir la creación del viaje si el vehículo no es válido, o la llegada es anterior a la salida o alguna de ellas no es válida.
-- El sistema debe impedir que se sobrepase la capacidad del vehículo.
-- Se debe aplicar RN-01 y RN-03.   
+- No aparecerán los viajes finalizados ni cancelados.
+- Aparecerán ordenados por distancia desde mi ubicación.
 
 <br>
 
-#### **RF-02: Reservar viajes**
-**Como** pasajero  
-**Quiero** reservar todos los viajes que quiera    
-**Para** realizar viajes en distintas fechas.
-
-**Prueba de aceptación**
-- El sistema no debe permitir la reserva si el viaje no tiene plazas disponibles.
-- El sistema debe generar automáticamente un registro de pago asociado a la reserva en estado 'Pendiente'.
-- Los pasajeros y conductor pueden ver la confirmación de su viaje y los detalles de la misma.
-- Se deben aplicar RN-04 y RN-05.
-
-<br>
-
-#### **RF-03: Chatear**
-**Como** conductor y pasajero  
-**Quiero** intercambiar mensajes entre conductor y pasajero  
-**Para** poder llegar a un acuerdo sobre aspectos del viaje y hacer variaciones en el viaje planteado.
-
-**Prueba de aceptación**
-- Mientras la reserva esté reservada, el pasajero y el conductor pueden acceder al chat.
-- Los usuarios reciben notificaciones cuando llega un mensaje nuevo.
-- Se debe aplicar RN-04.
-
-<br>
-
-#### **RF-04: Valorar**
-**Como** conductor y pasajero  
-**Quiero** que una vez terminado el viaje, pueda valorar al conductor o pasajero y tener la opción de dejar un comentario sobre la experiencia.  
-**Para** que otros usuarios tengan información acerca del usuario.
-
-**Prueba de aceptación**
-- El sistema permite al usuario asignar una puntuación en estrellas y añadir un comentario.
-- Si el viaje no ha sido completado, no se permiten valoraciones.
-- Se debe aplicar RN-06.
-
-<br>
-
-#### **RF-05: Cancelar viaje**
-**Como** conductor  
-**Quiero** poder cancelar el viaje reservado por pasajeros  
-**Para** avisar a los pasajeros que no voy a realizar el viaje y puedan buscar otro viaje.
-
-**Prueba de aceptación**
-- El sistema notifica a todos los pasajeros cuando el conductor cancela un viaje.
-- Una vez iniciado, el sistema no permite cancelar un viaje.
-- Se debe aplicar RN-02.
-
-<br>
-
-#### **RF-06: Cancelar pasajero**
-**Como** pasajero  
-**Quiero** poder cancelar el viaje que tengo reservado  
-**Para** avisar al conductor que no voy a realizar el viaje y dejar una plaza libre para otro pasajero.  
-
-
-**Prueba de aceptación**
-- El sistema libera una plaza cuando un pasajero cancela su reserva.
-- El conductor recibe una notificación cuando un pasajero cancela su reserva.
-- No se permite cancelar una reserva una vez iniciado el viaje.
-- Se debe aplicar RN-02.
-
-<br>
-
-#### **RF-07: Pagar**
-**Como** pasajero  
-**Quiero** utilizar un método de pago  
-**Para** reservar el viaje de forma segura.
-
-**Prueba de aceptación**
-- El sistema confirma el pago exitoso y genera un comprobante digital.
-- Si el pago falla, el sistema informa del error.
-- Se debe aplicar RN-05.
-
-<br>
-
-#### **RF-08: Cobrar**
-**Como** conductor  
-**Quiero** cobrar el pago realizado  
-**Para** obtener beneficio del viaje.
-
-**Prueba de aceptación**
-- El sistema liberará el saldo en la cuenta del conductor únicamente cuando el viaje se de por finalizado.
-- Se debe aplicar RN-05.
-
-<br>
-
-#### **RF-09: Editar viaje**
+#### **RF-02: Actualización de datos del viaje**
 **Como** conductor    
-**Quiero** tener la posibilidad de editar las características del viaje, tales como el precio, hora o lugar de salida,  
-**Para** ajustar el viaje a las necesidades acordadas
+**Quiero** que al actualizar los datos del viaje, el sistema consulte que el viaje a modificar esté disponible,  
+**Para** ajustar el viaje a las necesidades acordadas.
 
 **Prueba de aceptación**
 - El sistema actualiza los cambios realizados y los refleja en la vista pública del viaje.
-- Los pasajeros reciben una notificación cuando el conductor modifica el viaje.
 - El sistema da error si se intenta modificar un viaje ya iniciado.
 - Se debe aplicar RN-01.
 
 <br>
 
-#### **RF-10: Registro de usuario**  
-**Como** conductor y pasajero    
-**Quiero** identificarme      
-**Para** usar la aplicación y acceder a mis viajes.  
+#### **RF-03: Consultas de cancelaciones**
+**Como** conductor  
+**Quiero** que al cancelar un viaje, el sistema consulte que el viaje no ha comenzado ni que ya esté cancelado,    
+**Para** no crear errores ni notificaciones falsas.
 
 **Prueba de aceptación**
-- El sistema muestra un mensaje de error si el usuario introduce datos incorrectos al iniciar sesión.
-- El usuario debe registrarse introduciendo su nombre, correo electrónico, teléfono y contraseña válidos.
+- Podemos cancelar un viaje no iniciado y no cancelado. 
+- Una vez iniciado, el sistema no permite cancelar un viaje.
+- Se debe aplicar RN-02.
+
+<br>
+
+#### **RF-04: Consultas de reservas**
+**Como** pasajero  
+**Quiero** que al reservar un viaje, el sistema consulte si hay plazas disponibles,     
+**Para** realizar el viaje sin problemas.  
+
+**Prueba de aceptación**
+- El sistema no debe permitir la reserva si el viaje no tiene plazas disponibles.
+- Los pasajeros y conductor pueden ver la confirmación de su viaje y los detalles de la misma.
+
+<br>
+
+#### **RF-05: Consultas de mensajes**
+**Como** conductor y pasajero  
+**Quiero** consultar los mensajes intercambiados entre conductor y pasajero  
+**Para** poder comprobar los cambios realizados.
+
+**Prueba de aceptación**
+- No se bloqueará la consulta aun si el viaje se ha cancelado.
+- Se mostrarán todos los mensajes intercambiados.
+
+<br>
+
+#### **RF-06: Consultas de valoraciones**
+**Como** conductor y pasajero  
+**Quiero** que al reservar un viaje, el sistema consulte las últimas valoraciones de cada usuario y la muestre,   
+**Para** tener información acerca del usuario con el que voy a viajar.  
+
+**Prueba de aceptación**
+- El sistema mostrará 3 valoraciones por usuario.
+- Si no se disponen valoraciones de un usuario, saldrá un mensaje indicándolo.
+- Se debe aplicar RN-06.
+
+<br>
+
+#### **RF-07: Consultas de pagos**
+**Como** pasajero  
+**Quiero** consultar los pagos que he realizado en la plataforma, 
+**Para** comprobar los precios que pagué por otros viajes.
+
+**Prueba de aceptación**
+- El sistema muestra los pagos realizados y cancelados.  
+- Un pago pendiente no se mostrará.
+- Se debe aplicar RN-05.
+
+<br>
+
+#### **RF-08: Consulta de usuarios**  
+**Como** administrador    
+**Quiero** consultar los usuarios registrados en la plataforma,       
+**Para** manejar los perfiles registrados y crear estadísticas.
+
+**Prueba de aceptación**
+- El sistema muestra los pasajeros, conductores y administradores registrados.
+- No se mostrará un usuario duplicado.
 - Se debe aplicar RN-04.
 
 <br>
 
-#### **RF-11: Crear vehículos**  
+#### **RF-09: Consultas de vehículos**  
 **Como** conductor,  
-**Quiero** poder registrar o añadir vehículos con sus características,   
-**Para** facilitar la información del vehículo al realizar un viaje.  
+**Quiero** consultar los vehículos disponibles para un viaje,   
+**Para** elegir el más adecuado para un viaje.  
 
 **Prueba de aceptación**
-- El sistema no permite registrar un vehículo si faltan datos obligatorios o el formato de matrícula es inválido.
-- El sistema muestra los viajes que coinciden con los criterios de búsqueda.
-
+- El sistema no muestra un vehículo si faltan datos obligatorios o el formato de matrícula es inválido.
+- El sistema muestra los vehículos libres para ese viaje.
 
 <br>
 
-#### **RF-12: Búsqueda de viaje**  
+#### **RF-10: Búsqueda de viaje**  
 **Como** pasajero,     
 **Quiero** un apartado de búsqueda de los puntos de origen y destino,        
 **Para** reservar mis viajes.  
@@ -344,8 +313,8 @@ Un conductor no podrá publicar ningún viaje si aún no ha validado su permiso 
 
 <br>
 
-#### **RN-04: Validación de pasajero**
-Ningún pasajero podrá reservar un viaje si no supera los 16 años y esto ha sido verificado con su DNI.
+#### **RN-04: Validación de usuario**
+Ningún usuario podrá registrarse si no supera los 16 años y esto ha sido verificado con su DNI.
 
 <br>
 
