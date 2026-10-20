@@ -176,8 +176,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 **Para** comprobar los precios que pagué por otros viajes.
 
 **Prueba de aceptación**
-- El sistema muestra los pagos realizados y cancelados.  
-- Un pago pendiente no se mostrará.
+- El sistema muestra los pagos realizados, pendientes y cancelados.  
 - Se debe aplicar RN-05.
 
 <br>
@@ -190,7 +189,6 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 **Prueba de aceptación**
 - El sistema muestra los pasajeros, conductores y administradores registrados.
 - No se mostrará un usuario duplicado.
-- Se debe aplicar RN-04.
 
 <br>
 
@@ -244,8 +242,8 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 **Para** poder determinar si me conviene o no realizar el viaje.  
 
 ###### 🧪*Pruebas de aceptación*  
-- No existirán dos direcciones iguales.
-- No puedepartir y llegar al mismo punto físico.
+- No existirán dos puntos físicos con las mismas entradas (no se permiten puntos físicos duplicados).
+- Un viaje no puede partir y llegar al mismo punto físico.
 
 <br>
 
@@ -256,7 +254,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 ###### 🧪*Pruebas de aceptación*  
 - Si un viaje se cancela, desaparece del listado.
-- Se debe aplicar RN-01
+- Puedo comprobar toda la información de los viajes.
 
 <br>
 
@@ -296,7 +294,11 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 ### 4.1.2. Reglas de negocio
 
 #### **RN-01: Fechas válidas**
-Solo será posible publicar viajes con la fecha de salida futura y la fecha de llegada posterior a la fecha de salida.
+Solo será posible publicar viajes con la fecha de salida futura y la fecha de llegada posterior a la fecha de salida.  
+
+###### 🧪*Pruebas de aceptación*  
+- El sistema permitirá publicar un viaje con fecha de salida futura y fecha de llegada posterior a esta.
+- El sistema no permitirá publicar un viaje que tenga como fecha de salida el dia de ayer.
 
 <br>
 
@@ -305,26 +307,46 @@ Si un pasajero cancela un viaje 24 horas antes o el conductor hace cambios en la
 Si en cambio es el conductor el  que cancela el viaje, su tasa de fiabilidad bajará y esto repercutirá en futuros viajes ya que los pasajeros verán dicha tasa. 
 En ambos casos el pasajero/conductor afectado será notificado con un aviso automático.
 
+###### 🧪*Pruebas de aceptación*  
+- Cancelo un viaje 12 horas antes de su inicio y me devuelve la mitad del importe.
+- Al cancelar un viaje iniciado, no se me devuelve el importe.
+
 
 <br>
 
 #### **RN-03: Validación de conductor**
-Un conductor no podrá publicar ningún viaje si aún no ha validado su permiso de conducir y por consiguiente su mayoría de edad. 
+Un conductor no podrá publicar ningún viaje ni ejercer de conductor u¡en uno si aún no ha validado su permiso de conducir y por consiguiente su mayoría de edad. 
+
+###### 🧪*Pruebas de aceptación*  
+- Me deja publicar un viaje si tengo validado el carnet de conducir.
+- No me deja ser el conductor de un viaje si no tengo validado el carnet.
 
 <br>
 
 #### **RN-04: Validación de usuario**
 Ningún usuario podrá registrarse si no supera los 16 años y esto ha sido verificado con su DNI.
 
+###### 🧪*Pruebas de aceptación*  
+- Un usuario de 17 años puede registrarse sin problemas.
+- El sistema no permite que un usuario de 15 años se registre.
+
 <br>
 
 #### **RN-05: Pagos**
 El dinero abonado por el pasajero se guardará en la aplicación desde la reserva hasta el fin de viaje (evita fraudes).
-    
+
+###### 🧪*Pruebas de aceptación*  
+- El dinero abonado por un viaje que finalizó hace una semana es abonado al conductor.
+- El dinero abonado por un viaje próximo no se abona al conductor.
+
 <br>
 
 #### **RN-06: Valoraciones**
 Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado con él. A su vez, los pasajeros sólo pueden publicar valoraciones de los conductores con los que hayan viajado. 
+
+###### 🧪*Pruebas de aceptación*  
+- Puedo publicar una valoración del conductor con el que viajé ayer.
+- No puedo publicar una valoración del viaje que tengo la próxima semana.
 
 ---
 
