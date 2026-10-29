@@ -304,7 +304,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RI-07: Gestión de pagos**
+#### **RI-07: Pagos**
 **Como** conductor y pasajero,  
 **Quiero** tener  información acerca del estado del <u>pago</u>, que contenga el estado, la fecha y el importe, que vendrá recomendado para el creador del viaje por esta formula:(distancia (km) * consumo medio(l/100Km)) + extras(peajes) + comisión de CharlaCar(15%).  
 **Para** tener un pago seguro y que los viajes estén regidos por un precio justo.  
@@ -320,8 +320,8 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 Solo será posible publicar viajes con la fecha de salida futura y la fecha de llegada posterior a la fecha de salida.  
 
 ###### 🧪*Pruebas de aceptación*  
-- El sistema permitirá publicar un viaje con fecha de salida futura y fecha de llegada posterior a esta.
-- El sistema no permitirá publicar un viaje que tenga como fecha de salida el dia de ayer.
+- Si intento publicar un viaje que sale mañana a las 18:00 y que llega a las 20:00, el sistema me permite publicarlo.  
+- Si intento publicar un viaje que sale mañana a las 18:00 y que llega hoy, el sistema NO me permite publicarlo.  
 
 <br>
 
@@ -331,9 +331,8 @@ Si en cambio es el conductor el  que cancela el viaje, su tasa de fiabilidad baj
 En ambos casos el pasajero/conductor afectado será notificado con un aviso automático.
 
 ###### 🧪*Pruebas de aceptación*  
-- Cancelo un viaje 12 horas antes de su inicio y me devuelve la mitad del importe.
-- Al cancelar un viaje iniciado, no se me devuelve el importe.
-
+- Al cancelar un viaje 12 horas antes de su inicio, el sistema me devuelve la mitad del importe.  
+- Si cancelo un viaje que ya ha iniciado, el sistema no me devuelve nada del importe.  
 
 <br>
 
@@ -341,8 +340,8 @@ En ambos casos el pasajero/conductor afectado será notificado con un aviso auto
 Un conductor no podrá publicar ningún viaje ni ejercer de conductor u¡en uno si aún no ha validado su permiso de conducir y por consiguiente su mayoría de edad. 
 
 ###### 🧪*Pruebas de aceptación*  
-- Me deja publicar un viaje si tengo validado el carnet de conducir.
-- No me deja ser el conductor de un viaje si no tengo validado el carnet.
+- Si tengo validado el carnet de conducir e intento publicar un viaje, el sistema me permitirá publicarlo.  
+- Si no tengo validado el carnet de conducir e intento un viaje, el sistema NO me lo permitirá.  
 
 <br>
 
@@ -350,8 +349,8 @@ Un conductor no podrá publicar ningún viaje ni ejercer de conductor u¡en uno 
 Ningún usuario podrá registrarse si no supera los 16 años y esto ha sido verificado con su DNI.
 
 ###### 🧪*Pruebas de aceptación*  
-- Un usuario de 17 años puede registrarse sin problemas.
-- El sistema no permite que un usuario de 15 años se registre.
+- Puedo registrarme sin ningún problema si soy un usuario de 17 años.  
+- No puedo registrarme si lo intento y tengo 15 años.  
 
 <br>
 
@@ -359,8 +358,8 @@ Ningún usuario podrá registrarse si no supera los 16 años y esto ha sido veri
 El dinero abonado por el pasajero se guardará en la aplicación desde la reserva hasta el fin de viaje (evita fraudes).
 
 ###### 🧪*Pruebas de aceptación*  
-- El dinero abonado por un viaje que finalizó hace una semana es abonado al conductor.
-- El dinero abonado por un viaje próximo no se abona al conductor.
+- Fui el conductor de un viaje que finalizó hace una semana, el sistema ya me ha abonado el importe.
+- Voy a ser el conductor de un viaje programado para la semana que viene, y el sistema no me abona el importe.
 
 <br>
 
@@ -368,8 +367,8 @@ El dinero abonado por el pasajero se guardará en la aplicación desde la reserv
 Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado con él. A su vez, los pasajeros sólo pueden publicar valoraciones de los conductores con los que hayan viajado. 
 
 ###### 🧪*Pruebas de aceptación*  
-- Puedo publicar una valoración del conductor con el que viajé ayer.
-- No puedo publicar una valoración del viaje que tengo la próxima semana.
+- Ayer viajé como pasajero de un viaje, y el sistema me permite valorar al conductor del mismo.  
+- La semana que viene voy a realizar un viaje, el sistema aún no me permite valorar al conductor.  
 
 ---
 
