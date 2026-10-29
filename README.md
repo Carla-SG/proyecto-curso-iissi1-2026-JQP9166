@@ -433,12 +433,12 @@ Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
 |       | Usuario   | Conductor  | Pasajero  | Vehículo  | Viaje  | Reserva  | Pago  | Valoración  | Mensaje  | Punto Físico  |
-|:------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|
-| RI-01  | X          | X          | X          | X          | X          | X          | X          | X          | X          | X          |
-| RI-02  |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
-| RI-03  |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
-| RI-04  |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
-| RI-05  |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
+|:-------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|
+| RI-01  | X          | X          | X          |            |            |            |            |            |            |            |
+| RI-02  |            | X          | X          | X          | X          |           |           |          |           | X          |
+| RI-03  |            | X          |      X      |           | X          |           |           |           |           | X         |
+| RI-04  |            | X          |     X       |           | X          | X          |           |           |          |           |
+| RI-05  |            | X          |  X          |           | X          |           | X          | X          |           |           |
 | RI-06  |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
 | RI-07  |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
 | RF-1   |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
