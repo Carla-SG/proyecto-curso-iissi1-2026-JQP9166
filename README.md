@@ -281,7 +281,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RI-07: Gestión de pagos**
+#### **RI-07: Pagos**
 **Como** conductor y pasajero,  
 **Quiero** tener  información acerca del estado del <u>pago</u>, que contenga el estado, la fecha y el importe, que vendrá recomendado para el creador del viaje por esta formula:(distancia (km) * consumo medio(l/100Km)) + extras(peajes) + comisión de CharlaCar(15%).  
 **Para** tener un pago seguro y que los viajes estén regidos por un precio justo.  
