@@ -427,6 +427,7 @@ Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado 
 ### 5.2. Escenarios de prueba
 
 - con descripción textual y diagrama de objetos UML.
+Después de publicar nuestra aplicación, se registra un nuevo usuario. Este pretende publicar un viaje, la aplicación le obliga a registrarse, pidiéndole datos como: nombre completo, email, un teléfono de contacto y una contraseña para recordar su perfil. Como su objetivo es registrarse como conductor se le pregunta si dispone de carnet de conducir. Seguidamente se le permite completar las características de su vehículo, en ese caso serían: matrícula, marca, modelo, color y un consumo medio. Después de estar registrado, se le permite hacer uso de la aplicación con total libertad. Como quiere publicar un viaje, se le piden unos datos para hacer esto posible: fecha y hora, de salida y llegada, así como el lugar exacto de salida y llegada, con los kilómetros entre ellos, también completando el municipio donde se encuentran, por último las plazas totales y si están accesibles.
 
 ## 6. Matrices de trazabilidad
 
