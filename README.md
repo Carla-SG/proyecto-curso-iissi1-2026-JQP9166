@@ -432,7 +432,7 @@ Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado 
 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
-|       | Administrador| Usuario   | Conductor  | Pasajero  | Vehículo  | Viaje  | Reserva  | Pago  | Valoración  | Mensaje  | Punto Físico  |
+|       Administrador| Usuario   | Conductor  | Pasajero  | Vehículo  | Viaje  | Reserva  | Pago  | Valoración  | Mensaje  | Punto Físico  |
 |:------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|
 | RI-01  |            | X          | X          | X          | X          | X          | X          | X          | X          | X          | X          |
 | RI-02  |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
@@ -446,13 +446,13 @@ Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado 
 | RF-3   |            |            |            | X          | X          | X          |            |            |            |            |            |
 | RF-4   |            |            | X          | X          |            |            |            |            |            | X          |            |
 | RF-5   |            |            | X          | X          |            | X          |            |            | X          |            |            |
-| RF-6   |            |            |            | X          |            |            |            | X          |            |            |           |
-| RF-7   |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
-| RF-8   |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
-| RF-9   |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
-| RF-10  |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
-| RF-11  |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
-| RF-12  |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
+| RF-6   |            |            |            | X          |            |            |            | X          |            |            |            |
+| RF-7   | X          |  X         |            |            |            |            |            |            |            |            |            |
+| RF-8   |            |            | X          |            | X          | X          |            |            |            |            |            |
+| RF-9   |            |            |            | X          |            |            |            |            |            |            | X          |
+| RF-10  |            |            |            | X          |            |            | X          |            |            | X          |            |
+| RF-11  |            |            | X          | X          |            | X          |            |            |            |            |            |
+| RF-12  |            |            |            | X          |            | X          |            |            |            |            | X          |
 | RN-1   |            |            | X          |            |            | X          | X          | X          | X          | X          | X          |
 | RN-2   |            | X          | X          | X          |            | X          | X          | X          | X          | X          | X          |
 | RN-3   |            | X          | X          | X          |            | X          | X          | X          | X          | X          | X          |
