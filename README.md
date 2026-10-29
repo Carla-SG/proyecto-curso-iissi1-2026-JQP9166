@@ -112,19 +112,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-02: Actualización de datos del viaje**
-**Como** conductor    
-**Quiero** que al actualizar los datos del viaje, el sistema consulte que el viaje a modificar esté disponible,  
-**Para** ajustar el viaje a las necesidades acordadas.
-
-**Prueba de aceptación**
-- El sistema actualiza los cambios realizados y los refleja en la vista pública del viaje.
-- El sistema da error si se intenta modificar un viaje ya iniciado.
-- Se debe aplicar RN-01.
-
-<br>
-
-#### **RF-03: Consultas de cancelaciones**
+#### **RF-02: Consultas de cancelaciones**
 **Como** conductor  
 **Quiero** que al cancelar un viaje, el sistema consulte que el viaje no ha comenzado ni que ya esté cancelado,    
 **Para** no crear errores ni notificaciones falsas.
@@ -136,7 +124,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-04: Consultas de reservas**
+#### **RF-03: Consultas de reservas**
 **Como** pasajero  
 **Quiero** que al reservar un viaje, el sistema consulte si hay plazas disponibles,     
 **Para** realizar el viaje sin problemas.  
@@ -147,7 +135,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-05: Consultas de mensajes**
+#### **RF-04: Consultas de mensajes**
 **Como** conductor y pasajero  
 **Quiero** consultar los mensajes intercambiados entre conductor y pasajero  
 **Para** poder comprobar los cambios realizados.
@@ -158,7 +146,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-06: Consultas de valoraciones**
+#### **RF-05: Consultas de valoraciones**
 **Como** conductor y pasajero  
 **Quiero** que al reservar un viaje, el sistema consulte las últimas valoraciones de cada usuario y la muestre,   
 **Para** tener información acerca del usuario con el que voy a viajar.  
@@ -170,7 +158,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-07: Consultas de pagos**
+#### **RF-06: Consultas de pagos**
 **Como** pasajero  
 **Quiero** consultar los pagos que he realizado en la plataforma, 
 **Para** comprobar los precios que pagué por otros viajes.
@@ -181,7 +169,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-08: Consulta de usuarios**  
+#### **RF-07: Consulta de usuarios**  
 **Como** administrador    
 **Quiero** consultar los usuarios registrados en la plataforma,       
 **Para** manejar los perfiles registrados y crear estadísticas.
@@ -192,7 +180,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-09: Consultas de vehículos**  
+#### **RF-08: Consultas de vehículos**  
 **Como** conductor,  
 **Quiero** consultar los vehículos disponibles para un viaje,   
 **Para** elegir el más adecuado para un viaje.  
@@ -203,13 +191,48 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-10: Búsqueda de viaje**  
+#### **RF-9: Búsqueda de viaje**  
 **Como** pasajero,     
 **Quiero** un apartado de búsqueda de los puntos de origen y destino,        
 **Para** reservar mis viajes.  
 
 **Prueba de aceptación**
 - El sistema muestra un mensaje si no se encuentran viajes con los criterios introducidos.
+- Se debe aplicar RN-01.
+
+<br>
+
+#### **RF-10:Consultas motivos de cancelación**  
+**Como** pasajero,     
+**Quiero** ver la razón de cancelación de mi viaje,        
+**Para** conocer el por qué de la anulación.  
+
+**Prueba de aceptación**
+- El sistema muestra la justificación al anular el viaje.
+- Se debe aplicar RN-02.
+
+<br>
+
+#### **RF-11: Consultas de viaje por rango de fechas**  
+**Como** pasajero y conductor,     
+**Quiero** filtrar los viajes disponibles dentro de un rango concreto de fechas,        
+**Para** planificar mis viajes en un periodo específico.  
+
+**Prueba de aceptación**
+- El sistema validar-a que la fecha de inicio no sea posterior a la fecha de fin.
+- Solo se mostrarán los viajes cuya fecha de salida esté dentro del rango establecido.
+- Se debe aplicar RN-01.
+
+<br>
+
+#### **RF-12: Consulta de viajes por localidad origen**  
+**Como** pasajero,     
+**Quiero** encontrar los viajes disponibles filtrando por la localidad de origen,        
+**Para** encontrar trayectos que salgan exactamente del sitio filtrado.  
+
+**Prueba de aceptación**
+- El sistema mostrará todos los viajes activos cuyo campo o punto de salida coincida con la localidad introducida.  
+- Si no existen trayectos, se mostrará un aviso informando que no hay salidas disponibles.  
 - Se debe aplicar RN-01.
 
 ### 4.1.1. Requisitos de información
