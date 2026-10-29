@@ -421,6 +421,8 @@ Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado 
 ## 5. Modelo conceptual
 
 ### 5.1. Diagramas de clases UML
+El siguiente diagrama representa el modelo de datos de CharlaCar. La aplicacion distingue tres tipos de usuarios que comparten los mismos datos, **Administrador**, **Pasajero** y **Conductor**.Cada conductor puede tener varios **vehículos**, y con cada vehículo se realizan distintos **viajes**. Cada viaje tiene un punto de origen y destino(**PuntoFisico**).
+Los pasajeros solicitan plaza mediante **reservas**. Cada reserva corresponde a un único viaje y se abona mediante uno o varios **pagos**, que pueden quedar pendientes, completarse o reembolsarse. Además, pasajeros y conductores pueden intercambiar **mensajes** y **valorarse** mutuamente.
 
 ![Diagrama de clase](img/DClase_f.drawio.svg)
 
