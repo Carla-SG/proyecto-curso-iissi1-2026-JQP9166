@@ -337,7 +337,7 @@ En ambos casos el pasajero/conductor afectado será notificado con un aviso auto
 <br>
 
 #### **RN-03: Validación de conductor**
-Un conductor no podrá publicar ningún viaje ni ejercer de conductor u¡en uno si aún no ha validado su permiso de conducir y por consiguiente su mayoría de edad. 
+Un conductor no podrá publicar ningún viaje ni ejercer de conductor en uno si aún no ha validado su permiso de conducir y por consiguiente su mayoría de edad. 
 
 ###### 🧪*Pruebas de aceptación*  
 - Si tengo validado el carnet de conducir e intento publicar un viaje, el sistema me permitirá publicarlo.  
