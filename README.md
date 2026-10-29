@@ -433,6 +433,7 @@ Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 |       Administrador| Usuario   | Conductor  | Pasajero  | Vehículo  | Viaje  | Reserva  | Pago  | Valoración  | Mensaje  | Punto Físico  |
 =======
 <<<<<<< HEAD
@@ -466,19 +467,23 @@ Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado 
 =======
 |       | Administrador| Usuario   | Conductor  | Pasajero  | Vehículo  | Viaje  | Reserva  | Pago  | Valoración  | Mensaje  | Punto Físico  |
 >>>>>>> 485eb99be4a602dab07da9df4139b1df637ee420
+=======
+| Administrador| Usuario   | Conductor  | Pasajero  | Vehículo  | Viaje  | Reserva  | Pago  | Valoración  | Mensaje  | Punto Físico  |
+>>>>>>> ea2b5467336456253b98e7e706e69753b56e6793
 |:------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|
-| RI-01  |            | X          | X          | X          | X          | X          | X          | X          | X          | X          | X          |
-| RI-02  |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
-| RI-03  |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
-| RI-04  |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
-| RI-05  |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
-| RI-06  |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
-| RI-07  |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
+| RI-01  |           | X          | X          | X          |            |            |            |            |            |            |            |
+| RI-02  |           |             | X          | X          | X          | X          |           |           |          |           | X          |
+| RI-03  |           |             | X          |      X      |           | X          |           |           |           |           | X         |
+| RI-04  |           |             | X          |     X       |           | X          | X          |           |           |          |           |
+| RI-05  |           |             | X          |  X          |           | X          |           |           | X          |           |           |
+| RI-06  |            |            | X          |    X        |           | X          |           |           |           |      X     |           |
+| RI-07  |            |            | X          |      X      |           |           |           |      X     |           |           |           |
 | RF-1   |            |            | X          | X          |            | X          |            |            |            |            | X          |
 | RF-2   |            |            | X          |            |            | X          |            |            |            |            |            |
 | RF-3   |            |            |            | X          | X          | X          |            |            |            |            |            |
 | RF-4   |            |            | X          | X          |            |            |            |            |            | X          |            |
 | RF-5   |            |            | X          | X          |            | X          |            |            | X          |            |            |
+<<<<<<< HEAD
 | RF-6   |            |            |            | X          |            |            |            | X          |            |            |            |
 | RF-7   | X          |  X         |            |            |            |            |            |            |            |            |            |
 | RF-8   |            |            | X          |            | X          | X          |            |            |            |            |            |
@@ -492,6 +497,21 @@ Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado 
 | RN-4   |            | X          | X          | X          |            | X          | X          | X          | X          | X          | X          |
 | RN-5   |            | X          | X          | X          |            | X          | X          | X          | X          | X          | X          |
 | RN-6   |            | X          | X          | X          |            | X          | X          | X          | X          | X          | X          |
+=======
+| RF-6   |            |            |            | X          |            |            |            | X          |            |            |           |
+| RF-7   |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
+| RF-8   |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
+| RF-9   |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
+| RF-10  |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
+| RF-11  |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
+| RF-12  |            |            | X          |            | X          | X          | X          | X          | X          | X          | X          |
+| RN-1   |            |            | X          |            |            | X          |           |           |           |           |           |
+| RN-2   |            |           | X          | X          |            | X          |           |           |           |           |           |
+| RN-3   |            |           | X          | X          |            | X          |           |           |           |           |          |
+| RN-4   |            | X          |           |           |            |           |           |           |           |           |           |
+| RN-5   |            |           | X          | X          |            | X          | X          | X          |           |           |           |
+| RN-6   |            |           | X          | X          |            | X          |           |           | X          |           |           |
+>>>>>>> ea2b5467336456253b98e7e706e69753b56e6793
 
 -- fin entregable 2 --
 
