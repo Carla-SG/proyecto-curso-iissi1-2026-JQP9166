@@ -422,7 +422,7 @@ Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado 
 
 ### 5.1. Diagramas de clases UML
 
-- con restricciones.
+![Diagrama de clase](img/DClase_f.drawio.svg)
 
 ### 5.2. Escenarios de prueba
 
