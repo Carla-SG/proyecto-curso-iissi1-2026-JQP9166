@@ -191,7 +191,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-9: Búsqueda de viaje**  
+#### **RF-09: Búsqueda de viaje**  
 **Como** pasajero,     
 **Quiero** un apartado de búsqueda de los puntos de origen y destino,        
 **Para** reservar mis viajes.  
@@ -219,7 +219,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 **Para** planificar mis viajes en un periodo específico.  
 
 **Prueba de aceptación**
-- El sistema validar-a que la fecha de inicio no sea posterior a la fecha de fin.
+- El sistema validará que la fecha de inicio no sea posterior a la fecha de fin.
 - Solo se mostrarán los viajes cuya fecha de salida esté dentro del rango establecido.
 - Se debe aplicar RN-01.
 
@@ -261,7 +261,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 #### **RI-03: Punto Físico**
 **Como** conductor y pasajero,  
-**Quiero** ver los <u>puntos físicos</u> desde donde parte y a donde llega un viaje en el que participo, donde podré ver la dirección, localidad, provincia, país u código postal,   
+**Quiero** ver los <u>puntos físicos</u> desde donde parte y a donde llega un viaje en el que participo, donde podré ver la dirección, localidad, provincia, país y código postal,   
 **Para** poder determinar si me conviene o no realizar el viaje.  
 
 ###### 🧪*Pruebas de aceptación*  
