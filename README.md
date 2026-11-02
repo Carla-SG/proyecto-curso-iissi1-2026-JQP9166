@@ -428,8 +428,22 @@ Los pasajeros solicitan plaza mediante **reservas**. Cada reserva corresponde a 
 
 ### 5.2. Escenarios de prueba
 
-- con descripción textual y diagrama de objetos UML.
-Después de publicar nuestra aplicación, se registra un nuevo usuario. Este pretende publicar un viaje, la aplicación le obliga a registrarse, pidiéndole datos como: nombre completo, email, un teléfono de contacto y una contraseña para recordar su perfil. Como su objetivo es registrarse como conductor se le pregunta si dispone de carnet de conducir. Seguidamente se le permite completar las características de su vehículo, en ese caso serían: matrícula, marca, modelo, color y un consumo medio. Después de estar registrado, se le permite hacer uso de la aplicación con total libertad. Como quiere publicar un viaje, se le piden unos datos para hacer esto posible: fecha y hora, de salida y llegada, así como el lugar exacto de salida y llegada, con los kilómetros entre ellos, también completando el municipio donde se encuentran, por último las plazas totales y si están accesibles.
+Una vez publicada nuestra aplicación, los usuarios comienzan a usarla, y es por ello que la aplicación les obliga a registrarse, pidiéndole a cada uno: nombre, apellidos, email, teléfono y contraseña.  
+Se registran dos pasajeros: Marta y Manolo, cada una con su fecha de nacimiento registrada.  
+Se registra un conductor: Soledad, con el carnet verificado y la foto del mismo subida.  
+La conductora Soledad, tiene 2 vehículos registrados: un BMW serie 1 y un Seat Ibiza. Al registrarlos, les pide matrícula, plazas y consumo medio.  
+Marta realiza una reserva el 26/9/2026 a las 19:05, cuyo pago realiza a las 20:17. El viaje, Sale de un punto físico con dirección en Avenida Reina Mercedes, 5, de la localidad Sevilla, provincia de Sevilla, del país España y con código postal 41012. El punto físico al que llega es la Calle Amargura, 21 de San Fernando, Cádiz, 11100.  
+El viaje, con 0 plazas disponibles, tiene fecha de salida el 25/10/2026 a las 13:00, el estado es Finalizado, dado que ya se ha realizado. Tuvo una distancia de 101.5 km, llegando a las 14:30. Cada plaza tenía un coste de 8.50€, y había 3 plazas reservadas. Lo realizará con el BMW.  
+Previo al viaje, Marta envió un mensaje a Soledad el 22/10/2026 a las 12:52, cuyo contenido es: "¿Hay espacio disponible para llevar una maleta?". Soledad le responde con otro a las 17:30: "Sí, hay espacio libre".  
+Tras la finalización del viaje, Marta publica una valoración de Soledad: 2 estrellas, contenido: "Sólo habla de política", con fecha y hora el 31/10/2026 a las 14:35.  
+Soledad publica una valoración de Marta: 3 estrellas, contenido: Chica maja pero muy callada, con fecha y hora el 1/11/2026 a las 11:46.  
+
+Por otro lado, Manolo viajará con Soledad como conductora del Seat Ibiza, con fecha de salida 23/11/2026 a las 13:00, desde la Calle Tajo, 7, 41012 de Sevilla, hasta la Calle de Sevilla, 1, de Madrid, con código postal 28014. La hora de llegada son las 18:45, con 2 plazas disponibles, estando aún programado, recorriendo una distancia de 394 km, con coste de plaza de 20.75€ y con 1 plaza reservada.   
+Para ello, Manolo ha realizaod una reserva para ese viaje. El pago está pendiente.  
+Manolo le envía un mensaje a Soledad: "¿Se puede retrasar la salida una hora?", a lo que le responde Soledad: "Vale, sin problema.".  
+Como el viaje no ha finalizado, no se pueden poner valoraciones.
+
+![Diagrama de objeto](img/Dobjeto_f.drawio.svg)
 
 ## 6. Matrices de trazabilidad
 
