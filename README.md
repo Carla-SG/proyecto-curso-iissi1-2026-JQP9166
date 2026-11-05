@@ -44,7 +44,7 @@ A través de CharlaCar, Carlos puede publicar sus plazas libres calculando un pr
 El proyecto consiste en el desarrollo de un sistema para la gestión de transporte compartido, cuyo objetivo principal es conectar al conductor, que realiza cierto viaje con un determinado vehículo, con los pasajeros para la realización del viaje. 
 Un viaje está definido por los puntos físicos origen-destino, y cambia de estado en función del momento: Programado, EnCurso, Finalizado, Cancelado.
 Para la correcta realización del viaje, se deberá realizar una reserva del mismo, cuyo estado variará entre  Solicitada, Aceptada o Cancelada.
-Se continuará con la realización del cobro, mediante la pasarela de pago
+Se continuará con la realización del cobro, mediante la pasarela de pago.
 El sistema informará del estado del pago con los estados Pendiente, Exitoso o Reembolsado.
 La plataforma facilitará para la planificación del viaje el intercambio de mensajes privados entre conductor y pasajeros. Además, incluye un sistema de puntuación para conductores y pasajeros, que permitirá a los usuarios determinar una calificación una vez terminado el viaje.
 La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasajero y conductor. Además, esta interfaz debe ser sencilla para facilitar el uso a todo el público, fomentando el uso de vehículos compartidos.
@@ -202,7 +202,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-10:Consultas motivos de cancelación**  
+#### **RF-10: Consultas motivos de cancelación**  
 **Como** pasajero,     
 **Quiero** ver la razón de cancelación de mi viaje,        
 **Para** conocer el por qué de la anulación.  
@@ -250,7 +250,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 #### **RI-02: Viajes**
 **Como** conductor y pasajero,  
-**Quiero** un registro de los <u>viajes</u> en los que he perticipado, voy a participar o se han cancelado en el que pueda ver toda su información: fecha de salida, fecha de llegada, coste por plaza, plazas reservadas, plazas disponibles, estado y distancia. Además, me permitirá ver al <u>conductor</u> (el cuál tendrá verificado su carnet de conduccir, además de haber subido una foto de su carnet y tendrá una valoración media), con qué <u>vehículo</u> (y su información: matrícula, marca, modelo, plazas y consumo medio) y desde qué <u>punto físico</u> hasta qué otro,  
+**Quiero** un registro de los <u>viajes</u> en los que he participado, voy a participar o se han cancelado en el que pueda ver toda su información: fecha de salida, fecha de llegada, coste por plaza, plazas reservadas, plazas disponibles, estado y distancia. Además, me permitirá ver al <u>conductor</u> (el cual tendrá verificado su carnet de conducir, además de haber subido una foto de su carnet y tendrá una valoración media), con qué <u>vehículo</u> (y su información: matrícula, marca, modelo, plazas y consumo medio) y desde qué <u>punto físico</u> hasta qué otro,  
 **Para** llevar un control acerca de mis viajes.  
 
 ###### 🧪*Pruebas de aceptación*  
@@ -421,7 +421,7 @@ Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado 
 ## 5. Modelo conceptual
 
 ### 5.1. Diagramas de clases UML
-El siguiente diagrama representa el modelo de datos de CharlaCar. La aplicacion distingue tres tipos de usuarios que comparten los mismos datos, **Administrador**, **Pasajero** y **Conductor**.Cada conductor puede tener varios **vehículos**, y con cada vehículo se realizan distintos **viajes**. Cada viaje tiene un punto de origen y destino(**PuntoFisico**).
+El siguiente diagrama representa el modelo de datos de CharlaCar. La aplicación distingue tres tipos de usuarios que comparten los mismos datos, **Administrador**, **Pasajero** y **Conductor**. Cada conductor puede tener varios **vehículos**, y con cada vehículo se realizan distintos **viajes**. Cada viaje tiene un punto de origen y destino(**PuntoFisico**).
 Los pasajeros solicitan plaza mediante **reservas**. Cada reserva corresponde a un único viaje y se abona mediante uno o varios **pagos**, que pueden quedar pendientes, completarse o reembolsarse. Además, pasajeros y conductores pueden intercambiar **mensajes** y **valorarse** mutuamente.
 
 ![Diagrama de clase](img/DClase_f.drawio.svg)
@@ -439,7 +439,7 @@ Tras la finalización del viaje, Marta publica una valoración de Soledad: 2 est
 Soledad publica una valoración de Marta: 3 estrellas, contenido: Chica maja pero muy callada, con fecha y hora el 1/11/2026 a las 11:46.  
 
 Por otro lado, Manolo viajará con Soledad como conductora del Seat Ibiza, con fecha de salida 23/11/2026 a las 13:00, desde la Calle Tajo, 7, 41012 de Sevilla, hasta la Calle de Sevilla, 1, de Madrid, con código postal 28014. La hora de llegada son las 18:45, con 2 plazas disponibles, estando aún programado, recorriendo una distancia de 394 km, con coste de plaza de 20.75€ y con 1 plaza reservada.   
-Para ello, Manolo ha realizaod una reserva para ese viaje. El pago está pendiente.  
+Para ello, Manolo ha realizado una reserva para ese viaje. El pago está pendiente.  
 Manolo le envía un mensaje a Soledad: "¿Se puede retrasar la salida una hora?", a lo que le responde Soledad: "Vale, sin problema.".  
 Como el viaje no ha finalizado, no se pueden poner valoraciones.
 
