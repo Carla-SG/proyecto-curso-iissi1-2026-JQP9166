@@ -485,7 +485,7 @@ Como el viaje no ha finalizado, no se pueden poner valoraciones.
 
 ## 7. Modelo relacional en 3FN
 
-- Relaciones obtenidas al aplicar la transformación del modelo conceptual.
+- Relaciones obtenidas al aplicar la transformación del modelo conceptual
 
 ### 7.1.  Justificación de la estrategia de transformación de jerarquías
 
