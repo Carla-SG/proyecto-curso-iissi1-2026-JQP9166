@@ -17,7 +17,8 @@ CREATE TABLE usuarios (
     email VARCHAR(100) UNIQUE NOT NULL,
     telefono VARCHAR(15) NOT NULL,
     contrasena VARCHAR(255) NOT NULL,
-    
+    fechaNacimiento DATE NOT NULL,
+    fotoDNI VARCHAR(255) NOT NULL
     );
 
 CREATE TABLE administradores (
@@ -31,7 +32,6 @@ CREATE TABLE administradores (
 CREATE TABLE pasajeros (
     id INT PRIMARY KEY AUTO_INCREMENT,
     usuarioId INT NOT NULL,
-    fechaNacimiento DATE NOT NULL,
     FOREIGN KEY (usuarioId) REFERENCES usuarios(id)
         ON DELETE CASCADE
         ON UPDATE CASCADE
