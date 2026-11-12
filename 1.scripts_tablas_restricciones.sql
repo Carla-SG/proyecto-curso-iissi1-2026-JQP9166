@@ -17,6 +17,7 @@ CREATE TABLE usuarios (
     email VARCHAR(100) UNIQUE NOT NULL,
     telefono VARCHAR(15) NOT NULL,
     contrasena VARCHAR(255) NOT NULL,
+    
     );
 
 CREATE TABLE administradores (
