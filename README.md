@@ -27,7 +27,7 @@ A través de CharlaCar, Carlos puede publicar sus plazas libres calculando un pr
 
 •	**Conductor** 🚗: Usuario mayor de edad y con permiso de conducir validado, que publica un trayecto ofreciendo las plazas libres de su vehículo, estableciendo fecha, ruta, hora de salida y precio. 
 
-•	**Pasajero** 🎒: Usuario (mayor de 16 años verificado mediante DNI) que utiliza el sistema para buscar trayectos publicados y reservar una plaza en el vehículo de un conductor. 
+•	**Pasajero** 🎒: Usuario (mayor de 16 años) que utiliza el sistema para buscar trayectos publicados y reservar una plaza en el vehículo de un conductor. 
 
 •	**Pasarela de pago** 💳: Sistema de cobro de la aplicación que gestiona las transacciones de forma segura. Retiene el dinero abonado por el pasajero desde la reserva hasta que finaliza el viaje, momento en el cual libera los fondos al conductor, evitando así posibles fraudes. 
 
@@ -239,7 +239,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 #### **RI-01: Usuarios del sistema**
 **Como** administrador,  
-**Quiero** que exista una identificación de <u>usuario</u>, que permita al <u>administrador</u>, a los <u>pasajeros</u> y a los <u>conductores</u> acceder a su perfil del sistema, mediante un nombre, sus apellidos, email, teléfono y contraseña,  
+**Quiero** que exista una identificación de <u>usuario</u>, que permita al <u>administrador</u>, a los <u>pasajeros</u> y a los <u>conductores</u> acceder a su perfil del sistema, mediante un nombre, sus apellidos, email, teléfono, contraseña,fecha de nacimiento y foto del DNI.  
 **Para** permitirles usar correctamente el sistema.  
 
 ###### 🧪*Pruebas de aceptación*  
@@ -428,7 +428,7 @@ Los pasajeros solicitan plaza mediante **reservas**. Cada reserva corresponde a 
 
 ### 5.2. Escenarios de prueba
 
-Una vez publicada nuestra aplicación, los usuarios comienzan a usarla, y es por ello que la aplicación les obliga a registrarse, pidiéndole a cada uno: nombre, apellidos, email, teléfono y contraseña.  
+Una vez publicada nuestra aplicación, los usuarios comienzan a usarla, y es por ello que la aplicación les obliga a registrarse, pidiéndole a cada uno: nombre, apellidos, email, teléfono, contraseña, fecha de nacimiento y una foto del DNI.  
 Se registran dos pasajeros: Marta y Manolo, cada una con su fecha de nacimiento registrada.  
 Se registra un conductor: Soledad, con el carnet verificado y la foto del mismo subida.  
 La conductora Soledad, tiene 2 vehículos registrados: un BMW serie 1 y un Seat Ibiza. Al registrarlos, les pide matrícula, plazas y consumo medio.  

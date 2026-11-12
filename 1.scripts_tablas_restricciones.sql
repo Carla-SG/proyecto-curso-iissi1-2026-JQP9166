@@ -39,7 +39,7 @@ CREATE TABLE pasajeros (
 CREATE TABLE conductores (
     id INT PRIMARY KEY AUTO_INCREMENT,
     usuarioId INT NOT NULL,
-    carnetVerificado BOOLEAN NOT NULL,
+    carnetVerificado BOOLEAN NOT NULL DEFAULT FALSE,
     fotoCarnet VARCHAR(255) NOT NULL,
     valoracionMedia DECIMAL(4,2) NOT NULL, -- VERIFICAR VALORES ENTRE 0 Y 10 
     FOREIGN KEY (usuarioId) REFERENCES usuarios(id)
