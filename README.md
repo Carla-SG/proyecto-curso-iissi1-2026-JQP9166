@@ -44,7 +44,7 @@ A través de CharlaCar, Carlos puede publicar sus plazas libres calculando un pr
 El proyecto consiste en el desarrollo de un sistema para la gestión de transporte compartido, cuyo objetivo principal es conectar al conductor, que realiza cierto viaje con un determinado vehículo, con los pasajeros para la realización del viaje. 
 Un viaje está definido por los puntos físicos origen-destino, y cambia de estado en función del momento: Programado, EnCurso, Finalizado, Cancelado.
 Para la correcta realización del viaje, se deberá realizar una reserva del mismo, cuyo estado variará entre  Solicitada, Aceptada o Cancelada.
-Se continuará con la realización del cobro, mediante la pasarela de pago
+Se continuará con la realización del cobro, mediante la pasarela de pago.
 El sistema informará del estado del pago con los estados Pendiente, Exitoso o Reembolsado.
 La plataforma facilitará para la planificación del viaje el intercambio de mensajes privados entre conductor y pasajeros. Además, incluye un sistema de puntuación para conductores y pasajeros, que permitirá a los usuarios determinar una calificación una vez terminado el viaje.
 La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasajero y conductor. Además, esta interfaz debe ser sencilla para facilitar el uso a todo el público, fomentando el uso de vehículos compartidos.
@@ -112,19 +112,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-02: Actualización de datos del viaje**
-**Como** conductor    
-**Quiero** que al actualizar los datos del viaje, el sistema consulte que el viaje a modificar esté disponible,  
-**Para** ajustar el viaje a las necesidades acordadas.
-
-**Prueba de aceptación**
-- El sistema actualiza los cambios realizados y los refleja en la vista pública del viaje.
-- El sistema da error si se intenta modificar un viaje ya iniciado.
-- Se debe aplicar RN-01.
-
-<br>
-
-#### **RF-03: Consultas de cancelaciones**
+#### **RF-02: Consultas de cancelaciones**
 **Como** conductor  
 **Quiero** que al cancelar un viaje, el sistema consulte que el viaje no ha comenzado ni que ya esté cancelado,    
 **Para** no crear errores ni notificaciones falsas.
@@ -136,7 +124,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-04: Consultas de reservas**
+#### **RF-03: Consultas de reservas**
 **Como** pasajero  
 **Quiero** que al reservar un viaje, el sistema consulte si hay plazas disponibles,     
 **Para** realizar el viaje sin problemas.  
@@ -147,7 +135,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-05: Consultas de mensajes**
+#### **RF-04: Consultas de mensajes**
 **Como** conductor y pasajero  
 **Quiero** consultar los mensajes intercambiados entre conductor y pasajero  
 **Para** poder comprobar los cambios realizados.
@@ -158,7 +146,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-06: Consultas de valoraciones**
+#### **RF-05: Consultas de valoraciones**
 **Como** conductor y pasajero  
 **Quiero** que al reservar un viaje, el sistema consulte las últimas valoraciones de cada usuario y la muestre,   
 **Para** tener información acerca del usuario con el que voy a viajar.  
@@ -170,7 +158,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-07: Consultas de pagos**
+#### **RF-06: Consultas de pagos**
 **Como** pasajero  
 **Quiero** consultar los pagos que he realizado en la plataforma, 
 **Para** comprobar los precios que pagué por otros viajes.
@@ -181,7 +169,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-08: Consulta de usuarios**  
+#### **RF-07: Consulta de usuarios**  
 **Como** administrador    
 **Quiero** consultar los usuarios registrados en la plataforma,       
 **Para** manejar los perfiles registrados y crear estadísticas.
@@ -192,7 +180,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-09: Consultas de vehículos**  
+#### **RF-08: Consultas de vehículos**  
 **Como** conductor,  
 **Quiero** consultar los vehículos disponibles para un viaje,   
 **Para** elegir el más adecuado para un viaje.  
@@ -203,13 +191,48 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RF-10: Búsqueda de viaje**  
+#### **RF-09: Búsqueda de viaje**  
 **Como** pasajero,     
 **Quiero** un apartado de búsqueda de los puntos de origen y destino,        
 **Para** reservar mis viajes.  
 
 **Prueba de aceptación**
 - El sistema muestra un mensaje si no se encuentran viajes con los criterios introducidos.
+- Se debe aplicar RN-01.
+
+<br>
+
+#### **RF-10: Consultas motivos de cancelación**  
+**Como** pasajero,     
+**Quiero** ver la razón de cancelación de mi viaje,        
+**Para** conocer el por qué de la anulación.  
+
+**Prueba de aceptación**
+- El sistema muestra la justificación al anular el viaje.
+- Se debe aplicar RN-02.
+
+<br>
+
+#### **RF-11: Consultas de viaje por rango de fechas**  
+**Como** pasajero y conductor,     
+**Quiero** filtrar los viajes disponibles dentro de un rango concreto de fechas,        
+**Para** planificar mis viajes en un periodo específico.  
+
+**Prueba de aceptación**
+- El sistema validará que la fecha de inicio no sea posterior a la fecha de fin.
+- Solo se mostrarán los viajes cuya fecha de salida esté dentro del rango establecido.
+- Se debe aplicar RN-01.
+
+<br>
+
+#### **RF-12: Consulta de viajes por localidad origen**  
+**Como** pasajero,     
+**Quiero** encontrar los viajes disponibles filtrando por la localidad de origen,        
+**Para** encontrar trayectos que salgan exactamente del sitio filtrado.  
+
+**Prueba de aceptación**
+- El sistema mostrará todos los viajes activos cuyo campo o punto de salida coincida con la localidad introducida.  
+- Si no existen trayectos, se mostrará un aviso informando que no hay salidas disponibles.  
 - Se debe aplicar RN-01.
 
 ### 4.1.1. Requisitos de información
@@ -227,7 +250,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 #### **RI-02: Viajes**
 **Como** conductor y pasajero,  
-**Quiero** un registro de los <u>viajes</u> en los que he perticipado, voy a participar o se han cancelado en el que pueda ver toda su información: fecha de salida, fecha de llegada, coste por plaza, plazas reservadas, plazas disponibles, estado y distancia. Además, me permitirá ver al <u>conductor</u> (el cuál tendrá verificado su carnet de conduccir, además de haber subido una foto de su carnet y tendrá una valoración media), con qué <u>vehículo</u> (y su información: matrícula, marca, modelo, plazas y consumo medio) y desde qué <u>punto físico</u> hasta qué otro,  
+**Quiero** un registro de los <u>viajes</u> en los que he participado, voy a participar o se han cancelado en el que pueda ver toda su información: fecha de salida, fecha de llegada, coste por plaza, plazas reservadas, plazas disponibles, estado y distancia. Además, me permitirá ver al <u>conductor</u> (el cual tendrá verificado su carnet de conducir, además de haber subido una foto de su carnet y tendrá una valoración media), con qué <u>vehículo</u> (y su información: matrícula, marca, modelo, plazas y consumo medio) y desde qué <u>punto físico</u> hasta qué otro,  
 **Para** llevar un control acerca de mis viajes.  
 
 ###### 🧪*Pruebas de aceptación*  
@@ -238,7 +261,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 #### **RI-03: Punto Físico**
 **Como** conductor y pasajero,  
-**Quiero** ver los <u>puntos físicos</u> desde donde parte y a donde llega un viaje en el que participo, donde podré ver la dirección, localidad, provincia, país u código postal,   
+**Quiero** ver los <u>puntos físicos</u> desde donde parte y a donde llega un viaje en el que participo, donde podré ver la dirección, localidad, provincia, país y código postal,   
 **Para** poder determinar si me conviene o no realizar el viaje.  
 
 ###### 🧪*Pruebas de aceptación*  
@@ -281,7 +304,7 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 
 <br>
 
-#### **RI-07: Gestión de pagos**
+#### **RI-07: Pagos**
 **Como** conductor y pasajero,  
 **Quiero** tener  información acerca del estado del <u>pago</u>, que contenga el estado, la fecha y el importe, que vendrá recomendado para el creador del viaje por esta formula:(distancia (km) * consumo medio(l/100Km)) + extras(peajes) + comisión de CharlaCar(15%).  
 **Para** tener un pago seguro y que los viajes estén regidos por un precio justo.  
@@ -297,8 +320,8 @@ La interfaz, divide a los usuarios entre 3 roles disjuntos: administrador, pasaj
 Solo será posible publicar viajes con la fecha de salida futura y la fecha de llegada posterior a la fecha de salida.  
 
 ###### 🧪*Pruebas de aceptación*  
-- El sistema permitirá publicar un viaje con fecha de salida futura y fecha de llegada posterior a esta.
-- El sistema no permitirá publicar un viaje que tenga como fecha de salida el dia de ayer.
+- Si intento publicar un viaje que sale mañana a las 18:00 y que llega a las 20:00, el sistema me permite publicarlo.  
+- Si intento publicar un viaje que sale mañana a las 18:00 y que llega hoy, el sistema NO me permite publicarlo.  
 
 <br>
 
@@ -308,18 +331,17 @@ Si en cambio es el conductor el  que cancela el viaje, su tasa de fiabilidad baj
 En ambos casos el pasajero/conductor afectado será notificado con un aviso automático.
 
 ###### 🧪*Pruebas de aceptación*  
-- Cancelo un viaje 12 horas antes de su inicio y me devuelve la mitad del importe.
-- Al cancelar un viaje iniciado, no se me devuelve el importe.
-
+- Al cancelar un viaje 12 horas antes de su inicio, el sistema me devuelve la mitad del importe.  
+- Si cancelo un viaje que ya ha iniciado, el sistema no me devuelve nada del importe.  
 
 <br>
 
 #### **RN-03: Validación de conductor**
-Un conductor no podrá publicar ningún viaje ni ejercer de conductor u¡en uno si aún no ha validado su permiso de conducir y por consiguiente su mayoría de edad. 
+Un conductor no podrá publicar ningún viaje ni ejercer de conductor en uno si aún no ha validado su permiso de conducir y por consiguiente su mayoría de edad. 
 
 ###### 🧪*Pruebas de aceptación*  
-- Me deja publicar un viaje si tengo validado el carnet de conducir.
-- No me deja ser el conductor de un viaje si no tengo validado el carnet.
+- Si tengo validado el carnet de conducir e intento publicar un viaje, el sistema me permitirá publicarlo.  
+- Si no tengo validado el carnet de conducir e intento un viaje, el sistema NO me lo permitirá.  
 
 <br>
 
@@ -327,8 +349,8 @@ Un conductor no podrá publicar ningún viaje ni ejercer de conductor u¡en uno 
 Ningún usuario podrá registrarse si no supera los 16 años y esto ha sido verificado con su DNI.
 
 ###### 🧪*Pruebas de aceptación*  
-- Un usuario de 17 años puede registrarse sin problemas.
-- El sistema no permite que un usuario de 15 años se registre.
+- Puedo registrarme sin ningún problema si soy un usuario de 17 años.  
+- No puedo registrarme si lo intento y tengo 15 años.  
 
 <br>
 
@@ -336,8 +358,8 @@ Ningún usuario podrá registrarse si no supera los 16 años y esto ha sido veri
 El dinero abonado por el pasajero se guardará en la aplicación desde la reserva hasta el fin de viaje (evita fraudes).
 
 ###### 🧪*Pruebas de aceptación*  
-- El dinero abonado por un viaje que finalizó hace una semana es abonado al conductor.
-- El dinero abonado por un viaje próximo no se abona al conductor.
+- Fui el conductor de un viaje que finalizó hace una semana, el sistema ya me ha abonado el importe.
+- Voy a ser el conductor de un viaje programado para la semana que viene, y el sistema no me abona el importe.
 
 <br>
 
@@ -345,8 +367,8 @@ El dinero abonado por el pasajero se guardará en la aplicación desde la reserv
 Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado con él. A su vez, los pasajeros sólo pueden publicar valoraciones de los conductores con los que hayan viajado. 
 
 ###### 🧪*Pruebas de aceptación*  
-- Puedo publicar una valoración del conductor con el que viajé ayer.
-- No puedo publicar una valoración del viaje que tengo la próxima semana.
+- Ayer viajé como pasajero de un viaje, y el sistema me permite valorar al conductor del mismo.  
+- La semana que viene voy a realizar un viaje, el sistema aún no me permite valorar al conductor.  
 
 ---
 
@@ -399,32 +421,71 @@ Los conductores pueden publicar valoraciones de los pasajeros que hayan viajado 
 ## 5. Modelo conceptual
 
 ### 5.1. Diagramas de clases UML
+El siguiente diagrama representa el modelo de datos de CharlaCar. La aplicación distingue tres tipos de usuarios que comparten los mismos datos, **Administrador**, **Pasajero** y **Conductor**. Cada conductor puede tener varios **vehículos**, y con cada vehículo se realizan distintos **viajes**. Cada viaje tiene un punto de origen y destino(**PuntoFisico**).
+Los pasajeros solicitan plaza mediante **reservas**. Cada reserva corresponde a un único viaje y se abona mediante uno o varios **pagos**, que pueden quedar pendientes, completarse o reembolsarse. Además, pasajeros y conductores pueden intercambiar **mensajes** y **valorarse** mutuamente.
 
-- con restricciones.
+![Diagrama de clase](img/DClase_f.drawio.svg)
 
 ### 5.2. Escenarios de prueba
 
-- con descripción textual y diagrama de objetos UML.
+Una vez publicada nuestra aplicación, los usuarios comienzan a usarla, y es por ello que la aplicación les obliga a registrarse, pidiéndole a cada uno: nombre, apellidos, email, teléfono y contraseña.  
+Se registran dos pasajeros: Marta y Manolo, cada una con su fecha de nacimiento registrada.  
+Se registra un conductor: Soledad, con el carnet verificado y la foto del mismo subida.  
+La conductora Soledad, tiene 2 vehículos registrados: un BMW serie 1 y un Seat Ibiza. Al registrarlos, les pide matrícula, plazas y consumo medio.  
+Marta realiza una reserva el 26/9/2026 a las 19:05, cuyo pago realiza a las 20:17. El viaje, Sale de un punto físico con dirección en Avenida Reina Mercedes, 5, de la localidad Sevilla, provincia de Sevilla, del país España y con código postal 41012. El punto físico al que llega es la Calle Amargura, 21 de San Fernando, Cádiz, 11100.  
+El viaje, con 0 plazas disponibles, tiene fecha de salida el 25/10/2026 a las 13:00, el estado es Finalizado, dado que ya se ha realizado. Tuvo una distancia de 101.5 km, llegando a las 14:30. Cada plaza tenía un coste de 8.50€, y había 3 plazas reservadas. Lo realizará con el BMW.  
+Previo al viaje, Marta envió un mensaje a Soledad el 22/10/2026 a las 12:52, cuyo contenido es: "¿Hay espacio disponible para llevar una maleta?". Soledad le responde con otro a las 17:30: "Sí, hay espacio libre".  
+Tras la finalización del viaje, Marta publica una valoración de Soledad: 2 estrellas, contenido: "Sólo habla de política", con fecha y hora el 31/10/2026 a las 14:35.  
+Soledad publica una valoración de Marta: 3 estrellas, contenido: Chica maja pero muy callada, con fecha y hora el 1/11/2026 a las 11:46.  
+
+Por otro lado, Manolo viajará con Soledad como conductora del Seat Ibiza, con fecha de salida 23/11/2026 a las 13:00, desde la Calle Tajo, 7, 41012 de Sevilla, hasta la Calle de Sevilla, 1, de Madrid, con código postal 28014. La hora de llegada son las 18:45, con 2 plazas disponibles, estando aún programado, recorriendo una distancia de 394 km, con coste de plaza de 20.75€ y con 1 plaza reservada.   
+Para ello, Manolo ha realizado una reserva para ese viaje. El pago está pendiente.  
+Manolo le envía un mensaje a Soledad: "¿Se puede retrasar la salida una hora?", a lo que le responde Soledad: "Vale, sin problema.".  
+Como el viaje no ha finalizado, no se pueden poner valoraciones.
+
+![Diagrama de objeto](img/Dobjeto_f.drawio.svg)
 
 ## 6. Matrices de trazabilidad
 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:------|:-----------|:-----------|:-----------|:-----------|
-| RI-1  | X          | X          | X          | X          |
-| RI-2  |            | X          |            | X          |
-| RF-1  |            | X          |            | X          |
-| RF-2  | X          |            | X          | X          |
-| RN-1  |            | X          |            |            |
-| RN-2  | X          | X          | X          |            |
-| ...   |            |            |            |            |
+| | **Administrador** | **Usuario** | **Conductor** | **Pasajero** | **Vehículo** | **Viaje** | **Reserva** | **Pago** | **Valoración** | **Mensaje** | **Punto Físico** |
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| **RI-01** | | X | X | X | | | | | | | |
+| **RI-02** | | | X | X | X | X | | | | | X |
+| **RI-03** | | | X | X | | X | | | | | X |
+| **RI-04** | | | X | X | | X | X | | | | |
+| **RI-05** | | | X | X | | X | | | X | | |
+| **RI-06** | | | X | X | | X | | | | X | |
+| **RI-07** | | | X | X | | | | X | | | |
+| **RF-1** | | | X | X | | X | | | | | X |
+| **RF-2** | | | X | | | X | | | | | |
+| **RF-3** | | | | X | X | X | | | | | |
+| **RF-4** | | | X | X | | | | | | X | |
+| **RF-5** | | | X | X | | X | | | X | | |
+| **RF-6** | | | | X | | | | X | | | |
+| **RF-7** | X | X | | | | | | | | | |
+| **RF-8** | | | X | | X | X | | | | | |
+| **RF-9** | | | | X | | | | | | | X |
+| **RF-10** | | | | X | | | X | | | X | |
+| **RF-11** | | | X | X | | X | | | | | |
+| **RF-12** | | | | X | | X | | | | | X |
+| **RN-1** | | | X | | | X | | | | | |
+| **RN-2** | | | X | X | | X | | | | | |
+| **RN-3** | | | X | X | | X | | | | | |
+| **RN-4** | | X | | | | | | | | | |
+| **RN-5** | | | X | X | | X | X | X | | | |
+| **RN-6** | | | X | X | | X | | | X | | |
+
+
+
+
 
 -- fin entregable 2 --
 
 ## 7. Modelo relacional en 3FN
 
-- Relaciones obtenidas al aplicar la transformación del modelo conceptual.
+- Relaciones obtenidas al aplicar la transformación del modelo conceptual
 
 ### 7.1.  Justificación de la estrategia de transformación de jerarquías
 
