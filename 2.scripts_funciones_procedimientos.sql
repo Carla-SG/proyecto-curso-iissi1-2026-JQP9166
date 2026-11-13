@@ -47,7 +47,7 @@ BEGIN
     WHERE vh.conductorId = p_conductorId
       AND v.estado = 'Finalizado';
 
-    SET v_resultado = 100 - (v_viajes_cancelados * 10) + v_viajes_finalizados;
+    SET v_resultado = 100 - (v_viajes_cancelados * 10);
 
     IF v_resultado < -100 THEN
         RETURN -100;
