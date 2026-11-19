@@ -1,14 +1,14 @@
-DROP TABLE IF EXISTS usuarios;
-DROP TABLE IF EXISTS administradores;
-DROP TABLE IF EXISTS pasajeros;
-DROP TABLE IF EXISTS conductores;
-DROP TABLE IF EXISTS reservas;
-DROP TABLE IF EXISTS pagos;
-DROP TABLE IF EXISTS valoraciones;
 DROP TABLE IF EXISTS mensajes;
-DROP TABLE IF EXISTS vehiculos;
+DROP TABLE IF EXISTS valoraciones;
+DROP TABLE IF EXISTS pagos;
+DROP TABLE IF EXISTS reservas;
 DROP TABLE IF EXISTS viajes;
+DROP TABLE IF EXISTS vehiculos;
 DROP TABLE IF EXISTS puntosfisicos;
+DROP TABLE IF EXISTS conductores;
+DROP TABLE IF EXISTS pasajeros;
+DROP TABLE IF EXISTS administradores;
+DROP TABLE IF EXISTS usuarios;
 
 CREATE TABLE usuarios (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -23,7 +23,7 @@ CREATE TABLE usuarios (
 
 CREATE TABLE administradores (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    usuarioId INT NOT NULL,
+    usuarioId INT UNIQUE NOT NULL,
     FOREIGN KEY (usuarioId) REFERENCES usuarios(id)
         ON DELETE CASCADE
         ON UPDATE CASCADE
@@ -31,7 +31,7 @@ CREATE TABLE administradores (
 
 CREATE TABLE pasajeros (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    usuarioId INT NOT NULL,
+    usuarioId INT UNIQUE NOT NULL,
     FOREIGN KEY (usuarioId) REFERENCES usuarios(id)
         ON DELETE CASCADE
         ON UPDATE CASCADE
@@ -39,7 +39,7 @@ CREATE TABLE pasajeros (
 
 CREATE TABLE conductores (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    usuarioId INT NOT NULL,
+    usuarioId INT UNIQUE NOT NULL,
     carnetVerificado BOOLEAN NOT NULL DEFAULT FALSE,
     fotoCarnet VARCHAR(255) NOT NULL,
     valoracionMedia DECIMAL(4,2) NOT NULL DEFAULT 0.00 CHECK(valoracionMedia BETWEEN 0 AND 10), 
@@ -50,7 +50,7 @@ CREATE TABLE conductores (
 
 CREATE TABLE vehiculos (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    conductorId INT NOT NULL, 
+    conductorId INT  NOT NULL, 
     matricula VARCHAR(15) UNIQUE NOT NULL,
     marca VARCHAR(50) NOT NULL,
     modelo VARCHAR(50) NOT NULL,
