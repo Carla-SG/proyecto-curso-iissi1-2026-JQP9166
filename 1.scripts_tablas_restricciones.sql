@@ -48,6 +48,52 @@ CREATE TABLE conductores (
         ON UPDATE CASCADE 
 );
 
+CREATE TABLE vehiculos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    conductorId INT NOT NULL, 
+    matricula VARCHAR(15) UNIQUE NOT NULL,
+    marca VARCHAR(50) NOT NULL,
+    modelo VARCHAR(50) NOT NULL,
+    color VARCHAR(30) NOT NULL,
+    plazas INT NOT NULL,
+    consumoMedio DECIMAL(4,2) NOT NULL,
+    FOREIGN KEY (conductorId) REFERENCES conductores(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+CREATE TABLE puntosfisicos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    direccion VARCHAR(255) NOT NULL,
+    localidad VARCHAR(100) NOT NULL,
+    provincia VARCHAR(100) NOT NULL,
+    pais VARCHAR(100) NOT NULL,
+    codigoPostal VARCHAR(10) NOT NULL
+);
+
+CREATE TABLE viajes (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    vehiculoId INT NOT NULL,
+    origenId INT NOT NULL,
+    destinoId INT NOT NULL,
+    plazasDisponibles INT,
+    fechaHoraSalida DATETIME NOT NULL,
+    estado ENUM('Programado', 'EnCurso', 'Finalizado', 'Cancelado') NOT NULL,
+    distancia DECIMAL(6,2) NOT NULL,
+    fechaHoraLlegada DATETIME NOT NULL,
+    costePlaza DECIMAL(5,2) NOT NULL,
+    plazasReservadas INT NOT NULL,
+    FOREIGN KEY (vehiculoId) REFERENCES vehiculos(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (origenId) REFERENCES puntosfisicos(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (destinoId) REFERENCES puntosfisicos(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
 CREATE TABLE reservas (
     id INT PRIMARY KEY AUTO_INCREMENT,
     pasajeroId INT NOT NULL,
@@ -116,50 +162,4 @@ CREATE TABLE mensajes (
     FOREIGN KEY (conductorReceptorId) REFERENCES conductores(id)
         ON DELETE CASCADE
         ON UPDATE CASCADE
-);
-
-CREATE TABLE vehiculos (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    conductorId INT NOT NULL, 
-    matricula VARCHAR(15) UNIQUE NOT NULL,
-    marca VARCHAR(50) NOT NULL,
-    modelo VARCHAR(50) NOT NULL,
-    color VARCHAR(30) NOT NULL,
-    plazas INT NOT NULL,
-    consumoMedio DECIMAL(4,2) NOT NULL,
-    FOREIGN KEY (conductorId) REFERENCES conductores(id)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE
-);
-
-CREATE TABLE viajes (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    vehiculoId INT NOT NULL,
-    origenId INT NOT NULL,
-    destinoId INT NOT NULL,
-    plazasDisponibles INT,
-    fechaHoraSalida DATETIME NOT NULL,
-    estado ENUM('Programado', 'EnCurso', 'Finalizado', 'Cancelado') NOT NULL,
-    distancia DECIMAL(6,2) NOT NULL,
-    fechaHoraLlegada DATETIME NOT NULL,
-    costePlaza DECIMAL(5,2) NOT NULL,
-    plazasReservadas INT NOT NULL,
-    FOREIGN KEY (vehiculoId) REFERENCES vehiculos(id)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE,
-    FOREIGN KEY (origenId) REFERENCES puntosfisicos(id)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE,
-    FOREIGN KEY (destinoId) REFERENCES puntosfisicos(id)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE
-);
-
-CREATE TABLE puntosfisicos (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    direccion VARCHAR(255) NOT NULL,
-    localidad VARCHAR(100) NOT NULL,
-    provincia VARCHAR(100) NOT NULL,
-    pais VARCHAR(100) NOT NULL,
-    codigoPostal VARCHAR(10) NOT NULL
 );
