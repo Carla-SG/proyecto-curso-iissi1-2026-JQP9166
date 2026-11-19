@@ -42,7 +42,7 @@ CREATE TABLE conductores (
     usuarioId INT NOT NULL,
     carnetVerificado BOOLEAN NOT NULL DEFAULT FALSE,
     fotoCarnet VARCHAR(255) NOT NULL,
-    valoracionMedia DECIMAL(4,2) NOT NULL, -- VERIFICAR VALORES ENTRE 0 Y 10 
+    valoracionMedia DECIMAL(4,2) NOT NULL DEFAULT 0.00 CHECK(valoracionMedia BETWEEN 0 AND 10), 
     FOREIGN KEY (usuarioId) REFERENCES usuarios(id)
         ON DELETE CASCADE
         ON UPDATE CASCADE 
@@ -79,7 +79,7 @@ CREATE TABLE valoraciones (
     pasajeroReceptorId INT,
     conductorEmisorId INT,
     conductorReceptorId INT,
-    estrellas INT NOT NULL, --CHECK (estrellas BETWEEN 1 AND 5),
+    estrellas INT NOT NULL CHECK(estrellas BETWEEN 0 and 5), 
     comentario TEXT,
     fechaHora DATETIME NOT NULL,
     FOREIGN KEY (pasajeroEmisorId) REFERENCES pasajeros(id)
